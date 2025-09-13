@@ -24,7 +24,6 @@ import {
 } from "@/components/ui/select";
 import type { Message } from '@/ai/flows/types';
 import { Textarea } from '../ui/textarea';
-import * as pdfjs from "pdfjs-dist";
 
 
 const initialExperts = [
