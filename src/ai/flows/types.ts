@@ -99,7 +99,7 @@ export type GenerateAdulterantDetectionInstructionsOutput = z.infer<typeof Gener
 // Input Schema
 export const InterviewPrepperInputSchema = z.object({
   resumeText: z.string().describe("The user's full resume text."),
-  jobField: z.string().describe("The specific job field the user is applying for (e.g., Quality Control, Production, R&D)."),
+  experienceLevel: z.string().describe("The user's experience level (e.g., 'Fresher Student', 'Experienced Person')."),
   language: z.string().describe("The language for the response (e.g., English, Hinglish)."),
   history: z.array(z.object({
     role: z.enum(['user', 'model']),
@@ -122,3 +122,10 @@ export const InterviewPrepperOutputSchema = z.object({
   followUpSuggestion: z.string().describe("A concluding remark or a follow-up question to keep the conversation going.")
 });
 export type InterviewPrepperOutput = z.infer<typeof InterviewPrepperOutputSchema>;
+
+
+// Types for DOCX parsing action
+export const DocxParsingInputSchema = z.object({
+  file: z.instanceof(File),
+});
+export type DocxParsingInput = z.infer<typeof DocxParsingInputSchema>;

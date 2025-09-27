@@ -63,16 +63,14 @@ export default function RootLayout({
         <meta name="theme-color" content="#ffffff" />
       </head>
       <body className="font-body antialiased">
-        <React.Fragment>
-          <SubscriptionProvider key="sub-provider">
-            <AuthProvider key="auth-provider">
-              <LanguageProvider key="lang-provider">
+          <SubscriptionProvider>
+            <AuthProvider>
+              <LanguageProvider>
                   {children}
                   <Toaster />
               </LanguageProvider>
             </AuthProvider>
           </SubscriptionProvider>
-        </React.Fragment>
       </body>
     </html>
   );
