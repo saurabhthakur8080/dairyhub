@@ -10,6 +10,7 @@ import { gyanAI as gyanAIFlow } from "@/ai/flows/gyan-ai-flow";
 import { refineQuestion as refineQuestionFlow } from "@/ai/flows/refine-question-flow";
 import { textToSpeech as textToSpeechFlow } from "@/ai/flows/text-to-speech-flow";
 import { interviewPrepper as interviewPrepperFlow } from "@/ai/flows/interview-prepper-flow";
+import mammoth from 'mammoth';
 
 
 import type { 
@@ -19,7 +20,8 @@ import type {
     GyanAIInput,
     RefineQuestionInput,
     TextToSpeechInput,
-    InterviewPrepperInput
+    InterviewPrepperInput,
+    DocxParsingInput
 } from "@/ai/flows/types";
 
 export async function getDailyTip() {
@@ -56,4 +58,15 @@ export async function textToSpeech(input: TextToSpeechInput) {
 
 export async function interviewPrepper(input: InterviewPrepperInput) {
     return await interviewPrepperFlow(input);
+}
+
+export async function parseDocx(formData: FormData) {
+    const file = formData.get('file') as File;
+    if (!file) {
+        throw new Error('No file provided');
+    }
+    const arrayBuffer = await file.arrayBuffer();
+    const buffer = Buffer.from(arrayBuffer);
+    const result = await mammoth.extractRawText({ buffer });
+    return result.value;
 }

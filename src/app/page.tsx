@@ -1,22 +1,21 @@
 "use client";
 
-import { useState } from "react";
-import { DailyTip } from "@/components/daily-tip";
 import { Header } from "@/components/header";
 import { TopicGrid } from "@/components/topic-grid";
-import { SplashScreen } from "@/components/splash-screen";
 import { useAuth } from "@/context/auth-context";
+import { Loader2 } from "lucide-react";
+import { DailyTip } from "@/components/daily-tip";
+
 
 export default function Home() {
-  const [showSplash, setShowSplash] = useState(true);
-  const { user, loading } = useAuth();
+  const { loading } = useAuth();
 
-  const handleSplashFinished = () => {
-    setShowSplash(false);
-  };
-  
-  if (showSplash) {
-    return <SplashScreen onFinished={handleSplashFinished} />;
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <Loader2 className="h-8 w-8 animate-spin" />
+      </div>
+    );
   }
 
   return (
