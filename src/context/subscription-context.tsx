@@ -1,9 +1,9 @@
 
 'use client';
 
-import { createContext, useState, useContext, ReactNode, useCallback } from 'react';
-import { doc, getDoc, setDoc, serverTimestamp } from 'firebase/firestore';
-import { db } from '@/lib/firebase';
+import { createContext, useState, useContext, ReactNode, useCallback, useEffect } from 'react';
+import { doc, getDoc, setDoc, serverTimestamp, Firestore, getFirestore } from 'firebase/firestore';
+import { initFirebaseClient } from '@/lib/firebaseClient';
 import { add } from 'date-fns';
 
 export type SubscriptionPlan = '7-days' | '1-month' | '6-months' | 'yearly' | 'lifetime' | '7-days-ultimate' | '1-month-ultimate' | '6-months-ultimate' | 'yearly-ultimate' | 'lifetime-ultimate';
@@ -22,9 +22,17 @@ const SubscriptionContext = createContext<SubscriptionContextType | undefined>(u
 export function SubscriptionProvider({ children }: { children: ReactNode }) {
   const [plan, setPlan] = useState<SubscriptionPlan | null>(null);
   const [expiryDate, setExpiryDate] = useState<Date | null>(null);
+  const [db, setDb] = useState<Firestore | null>(null);
+
+  useEffect(() => {
+    const app = initFirebaseClient();
+    if (app) {
+      setDb(getFirestore(app));
+    }
+  }, []);
 
   const loadSubscription = useCallback(async (userId: string) => {
-    if (!userId) {
+    if (!userId || !db) {
         setPlan(null);
         setExpiryDate(null);
         return;
@@ -45,7 +53,7 @@ export function SubscriptionProvider({ children }: { children: ReactNode }) {
         setPlan(null);
         setExpiryDate(null);
     }
-  }, []);
+  }, [db]);
 
   const clearSubscription = () => {
     setPlan(null);
@@ -53,6 +61,10 @@ export function SubscriptionProvider({ children }: { children: ReactNode }) {
   };
 
   const subscribe = async (newPlan: SubscriptionPlan, userId: string, paymentId: string) => {
+    if (!db) {
+      console.error("Firestore is not initialized.");
+      return;
+    }
     const now = new Date();
     let newExpiryDate: Date | null = null;
     
@@ -98,5 +110,3 @@ export function useSubscription() {
   }
   return context;
 }
-
-    

@@ -1,166 +1,179 @@
+
 "use client";
 
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
-import {
-    getAuth,
-    onAuthStateChanged,
-    signInWithEmailAndPassword,
-    createUserWithEmailAndPassword,
-    signOut,
-    signInAnonymously,
-    updateProfile
+import React, { createContext, useState, useContext, ReactNode, useEffect } from 'react';
+import { 
+    getAuth, 
+    onAuthStateChanged, 
+    signInWithEmailAndPassword, 
+    createUserWithEmailAndPassword, 
+    signOut, 
+    updateProfile as firebaseUpdateProfile,
+    signInAnonymously
 } from 'firebase/auth';
-import { getFirestore, doc, setDoc, getDoc, updateDoc } from 'firebase/firestore';
-import { getStorage, ref, uploadBytes, getDownloadURL } from "firebase/storage";
-// YEH PATH ALIAS AB HAMESHA KAAM KAREGA
-import app from '@/lib/firebase'; 
-import { useSubscription } from '@/context/subscription-context';
+import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';
+import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
+import { useSubscription } from './subscription-context';
+import { initFirebaseClient } from '@/lib/firebaseClient';
 
-// Firebase services ko initialize karein
-const auth = getAuth(app);
-const db = getFirestore(app);
-const storage = getStorage(app);
-
-// Aapke Custom Types
 export type Department = 'process-access' | 'production-access' | 'quality-access' | 'all-control-access' | 'guest';
 
-export interface AppUser {
+interface AppUser {
     uid: string;
     email: string | null;
-    displayName: string | null;
+    displayName?: string | null;
     photoURL?: string | null;
     gender?: 'male' | 'female' | 'other';
     department?: Department;
     isAnonymous: boolean;
 }
 
-// Auth Context ka Type
 interface AuthContextType {
   user: AppUser | null;
   loading: boolean;
-  login: (email: string, password: string) => Promise<void>;
-  signup: (email: string, password: string, displayName: string, gender: 'male' | 'female' | 'other', department: Department) => Promise<void>;
+  login: (email: string, password: string) => Promise<any>;
+  signup: (email: string, password: string, displayName: string, gender: 'male' | 'female' | 'other', department: Department) => Promise<any>;
   logout: () => Promise<void>;
-  anonymousLogin: () => Promise<void>;
-  updateUserProfile: (profileData: Partial<AppUser>) => Promise<void>;
-  updateUserPhoto: (file: File) => Promise<string>;
+  anonymousLogin: () => Promise<any>;
+  updateUserProfile: (profileData: { displayName?: string; department?: Department }) => Promise<void>;
+  updateUserPhoto: (file: File) => Promise<void>;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
-// Main AuthProvider Component
 export function AuthProvider({ children }: { children: ReactNode }) {
   const [user, setUser] = useState<AppUser | null>(null);
   const [loading, setLoading] = useState(true);
   const { loadSubscription, clearSubscription } = useSubscription();
+  const app = initFirebaseClient();
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+  const storage = getStorage(app);
 
-  // YEH FUNCTION FIREBASE SE LIVE USER KA STATUS CHECK KARTA HAI
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
-      if (firebaseUser) {
-        // User logged in hai, ab uski extra details Firestore database se laayein
-        const userDocRef = doc(db, 'users', firebaseUser.uid);
-        const userDoc = await getDoc(userDocRef);
-        
-        if (userDoc.exists()) {
-          // Firestore mein user data mil gaya
-          const userData = userDoc.data();
-          setUser({
-            uid: firebaseUser.uid,
-            email: firebaseUser.email,
-            displayName: firebaseUser.displayName,
-            photoURL: firebaseUser.photoURL,
-            isAnonymous: firebaseUser.isAnonymous,
-            department: userData.department || 'guest',
-            gender: userData.gender || 'other',
-          });
-        } else if (firebaseUser.isAnonymous) {
-          // User guest hai aur firestore me data nahi hai
-           setUser({
-              uid: firebaseUser.uid,
-              email: null,
-              displayName: 'Guest',
-              photoURL: null,
-              isAnonymous: true,
-              department: 'guest',
-              gender: 'other',
-           });
+        if (firebaseUser) {
+            const userDocRef = doc(db, 'users', firebaseUser.uid);
+            const userDoc = await getDoc(userDocRef);
+            if (userDoc.exists()) {
+                const userData = userDoc.data();
+                 setUser({
+                    uid: firebaseUser.uid,
+                    email: firebaseUser.email,
+                    displayName: firebaseUser.displayName,
+                    photoURL: firebaseUser.photoURL,
+                    isAnonymous: firebaseUser.isAnonymous,
+                    gender: userData.gender,
+                    department: userData.department,
+                });
+            } else if (firebaseUser.isAnonymous) {
+                 setUser({
+                    uid: firebaseUser.uid,
+                    email: null,
+                    displayName: 'Guest',
+                    photoURL: `https://placehold.co/128x128/E0E0E0/333?text=G`,
+                    isAnonymous: true,
+                    department: 'guest',
+                });
+            } else {
+                 setUser({
+                    uid: firebaseUser.uid,
+                    email: firebaseUser.email,
+                    displayName: firebaseUser.displayName,
+                    photoURL: firebaseUser.photoURL,
+                    isAnonymous: false,
+                });
+            }
+            loadSubscription(firebaseUser.uid);
         } else {
-            // User authenticated hai (guest nahi hai), lekin firestore doc abhi tak nahi bana hai (signup case).
-            // Firebase Auth object se hi basic user bana dein.
-            setUser({
-                uid: firebaseUser.uid,
-                email: firebaseUser.email,
-                displayName: firebaseUser.displayName,
-                photoURL: firebaseUser.photoURL,
-                isAnonymous: false,
-                department: 'guest', // Default value, will be updated shortly after signup
-                gender: 'other', // Default value
-            });
+            setUser(null);
+            clearSubscription();
         }
-        await loadSubscription(firebaseUser.uid);
-
-      } else {
-        // User logged out hai
-        setUser(null);
-        clearSubscription();
-      }
-      setLoading(false);
+        setLoading(false);
     });
-    // Cleanup function
-    return () => unsubscribe();
-  }, [loadSubscription, clearSubscription]);
 
-  // YEH SACH MEIN FIREBASE MEIN LOGIN KARTA HAI
-  const login = async (email: string, password: string) => {
-    await signInWithEmailAndPassword(auth, email, password);
+    return () => unsubscribe();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [auth, db]);
+
+  const login = (email: string, password: string) => {
+    return signInWithEmailAndPassword(auth, email, password);
   };
   
-  // YEH SACH MEIN FIREBASE MEIN NAYA ACCOUNT BANATA HAI
+  const anonymousLogin = () => {
+    return signInAnonymously(auth);
+  }
+
   const signup = async (email: string, password: string, displayName: string, gender: 'male' | 'female' | 'other', department: Department) => {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const firebaseUser = userCredential.user;
-    // Firebase Auth profile update karein
-    await updateProfile(firebaseUser, { displayName });
-    // Firestore database mein user ki extra details save karein
+    
+    await firebaseUpdateProfile(firebaseUser, { 
+        displayName,
+        photoURL: `https://placehold.co/128x128/E0E0E0/333?text=${displayName.charAt(0).toUpperCase()}`
+    });
+
     const userDocRef = doc(db, 'users', firebaseUser.uid);
-    await setDoc(userDocRef, { uid: firebaseUser.uid, displayName, email, gender, department, createdAt: new Date() });
-  };
+    await setDoc(userDocRef, {
+        uid: firebaseUser.uid,
+        email: firebaseUser.email,
+        displayName: displayName,
+        gender: gender,
+        department: department,
+    });
+    
+    return userCredential;
+};
 
-  const logout = async () => {
-    await signOut(auth);
-  };
-  
-  const anonymousLogin = async () => {
-    await signInAnonymously(auth);
-  }
+const logout = () => {
+    return signOut(auth);
+};
 
-  const updateUserProfile = async (profileData: Partial<AppUser>) => {
-    if (!auth.currentUser) throw new Error("User not logged in");
-    const userDocRef = doc(db, 'users', auth.currentUser.uid);
-    await updateDoc(userDocRef, profileData);
-
-    if (profileData.displayName || profileData.photoURL) {
-        await updateProfile(auth.currentUser, { 
-            displayName: profileData.displayName, 
-            photoURL: profileData.photoURL 
-        });
+const updateUserProfile = async (profileData: { displayName?: string; department?: Department }) => {
+   if (auth.currentUser) {
+       if (profileData.displayName) {
+           await firebaseUpdateProfile(auth.currentUser, { displayName: profileData.displayName });
+       }
+       const userDocRef = doc(db, 'users', auth.currentUser.uid);
+       await setDoc(userDocRef, profileData, { merge: true });
+       // Refresh user state
+       const updatedUserDoc = await getDoc(userDocRef);
+       if (updatedUserDoc.exists()) {
+           const userData = updatedUserDoc.data();
+            setUser({
+                uid: auth.currentUser.uid,
+                email: auth.currentUser.email,
+                displayName: auth.currentUser.displayName,
+                photoURL: auth.currentUser.photoURL,
+                isAnonymous: auth.currentUser.isAnonymous,
+                gender: userData.gender,
+                department: userData.department,
+            });
+       }
     }
-    // Update local user state
-    setUser(prevUser => prevUser ? { ...prevUser, ...profileData } : null);
   };
 
-  const updateUserPhoto = async (file: File): Promise<string> => {
-      if (!auth.currentUser) throw new Error("User not logged in");
-      const filePath = `profile-photos/${auth.currentUser.uid}/${Date.now()}_${file.name}`;
-      const storageRef = ref(storage, filePath);
-      await uploadBytes(storageRef, file);
-      const photoURL = await getDownloadURL(storageRef);
-      await updateUserProfile({ photoURL: photoURL });
-      return photoURL;
+  const updateUserPhoto = async (file: File) => {
+    if (!auth.currentUser) return;
+    
+    const storageRef = ref(storage, `profile_pictures/${auth.currentUser.uid}`);
+    await uploadBytes(storageRef, file);
+    const photoURL = await getDownloadURL(storageRef);
+
+    await firebaseUpdateProfile(auth.currentUser, { photoURL });
+     setUser(prevUser => prevUser ? { ...prevUser, photoURL } : null);
   };
-  
-  const value = { user, loading, login, signup, logout, anonymousLogin, updateUserProfile, updateUserPhoto };
+
+  const value = {
+    user,
+    loading,
+    login,
+    signup,
+    logout,
+    anonymousLogin,
+    updateUserProfile,
+    updateUserPhoto
+  };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 }
