@@ -62,17 +62,42 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         const userDocRef = doc(db, 'users', firebaseUser.uid);
         const userDoc = await getDoc(userDocRef);
         
-        const userData = userDoc.exists() ? userDoc.data() : {};
-        const appUser = {
-          uid: firebaseUser.uid,
-          email: firebaseUser.email,
-          displayName: firebaseUser.displayName,
-          photoURL: firebaseUser.photoURL,
-          isAnonymous: firebaseUser.isAnonymous,
-          department: userData.department || 'guest',
-          gender: userData.gender || 'other',
-        };
-        setUser(appUser);
+        if (userDoc.exists()) {
+          // Firestore mein user data mil gaya
+          const userData = userDoc.data();
+          setUser({
+            uid: firebaseUser.uid,
+            email: firebaseUser.email,
+            displayName: firebaseUser.displayName,
+            photoURL: firebaseUser.photoURL,
+            isAnonymous: firebaseUser.isAnonymous,
+            department: userData.department || 'guest',
+            gender: userData.gender || 'other',
+          });
+        } else if (firebaseUser.isAnonymous) {
+          // User guest hai aur firestore me data nahi hai
+           setUser({
+              uid: firebaseUser.uid,
+              email: null,
+              displayName: 'Guest',
+              photoURL: null,
+              isAnonymous: true,
+              department: 'guest',
+              gender: 'other',
+           });
+        } else {
+            // User authenticated hai (guest nahi hai), lekin firestore doc abhi tak nahi bana hai (signup case).
+            // Firebase Auth object se hi basic user bana dein.
+            setUser({
+                uid: firebaseUser.uid,
+                email: firebaseUser.email,
+                displayName: firebaseUser.displayName,
+                photoURL: firebaseUser.photoURL,
+                isAnonymous: false,
+                department: 'guest', // Default value, will be updated shortly after signup
+                gender: 'other', // Default value
+            });
+        }
         await loadSubscription(firebaseUser.uid);
 
       } else {
