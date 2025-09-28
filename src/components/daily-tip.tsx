@@ -1,7 +1,6 @@
-
 "use client";
 
-import { useState, useTransition } from "react";
+import { useState, useTransition, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { getDailyTip } from "@/app/actions";
@@ -9,10 +8,15 @@ import { Lightbulb, Sparkles, X, Copy } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export function DailyTip() {
-  const [tip, setTip] = useState(() => "SNF = TS - Fat");
+  const [tip, setTip] = useState("SNF = TS - Fat");
   const [isPending, startTransition] = useTransition();
-  const [isVisible, setIsVisible] = useState(true);
+  const [isVisible, setIsVisible] = useState(false);
   const { toast } = useToast();
+
+  useEffect(() => {
+    // This ensures the component is only made visible on the client-side, preventing hydration mismatch.
+    setIsVisible(true);
+  }, []);
 
   const handleNewTip = () => {
     startTransition(async () => {
@@ -38,6 +42,7 @@ export function DailyTip() {
   }
   
   if (!isVisible) {
+      // Render a placeholder or nothing on the server and during initial client render
       return (
         <div className="flex justify-center mb-8">
             <Button
@@ -49,7 +54,7 @@ export function DailyTip() {
               {isPending ? "Soch raha hu..." : "Show Daily Tip"}
             </Button>
         </div>
-      )
+      );
   }
 
   return (
@@ -74,7 +79,7 @@ export function DailyTip() {
           className="text-sm shrink-0 bg-gradient-to-r from-primary to-indigo-400 text-primary-foreground hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
         >
           <Sparkles className="mr-2 h-4 w-4" />
-          {isPending ? "Soch raha hu..." : "Naya Tip"}
+          {isPending ? "Soch raha hu..." : "Daily Tip"}
         </Button>
       </CardContent>
     </Card>
