@@ -9,7 +9,7 @@ import { Lightbulb, Sparkles, X, Copy } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 export function DailyTip() {
-  const [tip, setTip] = useState("SNF = TS - Fat");
+  const [tip, setTip] = useState(() => "SNF = TS - Fat");
   const [isPending, startTransition] = useTransition();
   const [isVisible, setIsVisible] = useState(true);
   const { toast } = useToast();
