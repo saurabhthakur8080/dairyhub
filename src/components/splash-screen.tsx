@@ -1,13 +1,18 @@
-
 "use client";
 
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
-export function SplashScreen({ onFinished }: { onFinished: () => void }) {
+export default function SplashScreen({ onFinished }: { onFinished: () => void }) {
+  const router = useRouter();
+
   useEffect(() => {
-    // This effect can be used for any logic that needs to run
-    // when the splash screen is mounted.
-  }, [onFinished]);
+    const timer = setTimeout(() => {
+      onFinished();
+    }, 6000); // 6 seconds
+
+    return () => clearTimeout(timer);
+  }, [onFinished, router]);
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black">
@@ -16,7 +21,6 @@ export function SplashScreen({ onFinished }: { onFinished: () => void }) {
         autoPlay
         muted
         playsInline
-        onEnded={onFinished} // Call onFinished when the video ends
         className="object-cover w-full h-full"
         onContextMenu={(e) => e.preventDefault()} // Disable right-click menu
       />

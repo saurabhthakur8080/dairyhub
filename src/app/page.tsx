@@ -1,28 +1,42 @@
 "use client";
 
-import { useState, useEffect } from 'react';
-import dynamic from 'next/dynamic';
-import { SplashScreen } from '@/components/splash-screen';
+import { Header } from "@/components/header";
+import { TopicGrid } from "@/components/topic-grid";
+import { useAuth } from "@/context/auth-context";
+import { Loader2 } from "lucide-react";
+import { DailyTip } from "@/components/daily-tip";
 
-const App = dynamic(() => import('@/app/App'), { ssr: false });
 
-export default function Page() {
-  const [showSplash, setShowSplash] = useState(true);
+export default function Home() {
+  const { loading, user } = useAuth();
 
-  // This effect will run only on the client.
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowSplash(false);
-    }, 3000); // Duration of the splash screen
-
-    return () => clearTimeout(timer);
-  }, []);
-  
-  if (showSplash) {
-    // While the splash screen is showing, we don't render the main app.
-    return <SplashScreen onFinished={() => setShowSplash(false)} />;
+  if (loading) {
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <Loader2 className="h-8 w-8 animate-spin" />
+      </div>
+    );
   }
 
-  // Once the splash screen is done, render the main app.
-  return <App />;
+  // Although this page is public, we re-render key components on auth state change
+  // to ensure the header updates correctly when a user logs in or out.
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-background to-blue-50">
+      <div className="max-w-7xl mx-auto p-4 sm:p-6">
+        <Header />
+        <main>
+          <DailyTip />
+          <div className="text-center my-8">
+            <h2 className="font-headline text-3xl font-bold text-gray-800">
+              Dairy Information & Calculations
+            </h2>
+            <p className="font-headline text-sm font-semibold bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
+              By Saurabh Rajput
+            </p>
+          </div>
+          <TopicGrid />
+        </main>
+      </div>
+    </div>
+  );
 }
