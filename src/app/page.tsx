@@ -7,23 +7,22 @@ import { SplashScreen } from '@/components/splash-screen';
 const App = dynamic(() => import('@/app/App'), { ssr: false });
 
 export default function Page() {
-  const [isClient, setIsClient] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
 
+  // This effect will run only on the client.
   useEffect(() => {
-    // This effect runs only on the client, after the initial server render
     const timer = setTimeout(() => {
-        setIsClient(true);
+      setShowSplash(false);
     }, 3000); // Duration of the splash screen
-    
-    // Cleanup the timer if the component unmounts
+
     return () => clearTimeout(timer);
   }, []);
   
-  // On the server and initial client render, show the splash screen
-  if (!isClient) {
-    return <SplashScreen onFinished={() => setIsClient(true)} />;
+  if (showSplash) {
+    // While the splash screen is showing, we don't render the main app.
+    return <SplashScreen onFinished={() => setShowSplash(false)} />;
   }
 
-  // Once the client has mounted and the timer is up, render the main App
+  // Once the splash screen is done, render the main app.
   return <App />;
 }

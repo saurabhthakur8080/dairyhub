@@ -5,11 +5,8 @@ import { useEffect } from 'react';
 
 export function SplashScreen({ onFinished }: { onFinished: () => void }) {
   useEffect(() => {
-    const timer = setTimeout(() => {
-      onFinished();
-    }, 6000); // 6 seconds
-
-    return () => clearTimeout(timer);
+    // This effect can be used for any logic that needs to run
+    // when the splash screen is mounted.
   }, [onFinished]);
 
   return (
@@ -19,6 +16,7 @@ export function SplashScreen({ onFinished }: { onFinished: () => void }) {
         autoPlay
         muted
         playsInline
+        onEnded={onFinished} // Call onFinished when the video ends
         className="object-cover w-full h-full"
         onContextMenu={(e) => e.preventDefault()} // Disable right-click menu
       />
