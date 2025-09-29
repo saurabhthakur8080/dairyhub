@@ -62,7 +62,7 @@ export const calibrationStandardizationContent = {
         title: "Butyrometer का Calibration",
         principle: {
             title: "Siddhant",
-            desc: "Butyrometer calibration का mukhya siddhant yeh hai ki iske stem (patli nali) par bane nishaan ek nishchit volume ko darshate hain. <strong>Milk Butyrometer</strong> ke liye, har ek <strong>1% fat ka nishaan 0.125 milliliter</strong> ke aantarik volume ke barabar hota hai. Isliye, 0 se 10% tak ki poori scale ka volume 1.25 milliliter hona chahiye. Calibration mein hum isi volume ki jaanch karte hain. Iske liye aam taur par shuddh para (mercury) ka upyog kiya jaata hai kyunki yeh kaanch se nahi chipakta hai aur iska density bahut adhik hota hai."
+            desc: "Butyrometer calibration का mukhya siddhant yeh hai ki iske stem (patli nali) par bane nishaan ek nishchit volume ko darshate hain. <strong>Milk Butyrometer</strong> ke liye, har ek <strong>1% fat ka nishaan 0.125 milliliter</strong> ke aantarik volume ke barabar hota hai. Isliye, 0 से 10% tak ki poori scale ka volume 1.25 milliliter hona chahiye. Calibration mein hum isi volume ki jaanch karte hain. Iske liye aam taur par shuddh para (mercury) ka upyog kiya jaata hai kyunki yeh kaanch se nahi chipakta hai aur iska density bahut adhik hota hai."
         },
         methods: {
             title: "Calibration के विभिन्न तरीके",
@@ -84,7 +84,7 @@ export const calibrationStandardizationContent = {
                 ]
             },
             gravimetric: {
-                title: "3. Gravimetric Method (Mercury तौलकर)",
+                title: "3. Gravimetric Method (by weighing Mercury)",
                 desc: "Yeh sabse sateek tareeka hai. Ismein alag-alag nishaanon ke beech mercury ka vajan karke volume nikala jaata hai.",
                 steps: [
                     "Ek saaf, sukhe butyrometer ko tolein.",
@@ -295,7 +295,7 @@ en: {
             header1: "Scale Range (%)",
             header2: "Product",
             rows: [
-                { scale: "0–0.5", product: "Skim milk" },
+                { scale: "0–0.5", product: "Skimmed milk" },
                 { scale: "0–4", product: "Partly skimmed milk, buttermilk" },
                 { scale: "0–10", product: "Whole milk, evaporated milk (unsweetened)" },
                 { scale: "0–20", product: "Dry milk powder" },
@@ -389,5 +389,7 @@ en: {
     }
 }
 }
+
+    
 
     
