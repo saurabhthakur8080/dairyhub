@@ -1,113 +1,182 @@
 "use client";
 
-import { useState } from 'react';
-import { IndianDairyIcon, FssaiIcon, QualityIcon, MicrobiologyIcon, AuditIcon, ValidationIcon, ExpertIcon, CalibrationIcon, LabEquipIcon, MilkChemistryIcon, LabCalcIcon, ProductionCalcIcon, AdulterationIcon, SolutionPrepIcon, CompositionIcon, WaterTestIcon, PackagingIcon, MilkStandardizationIcon, AdvancedStandardizationIcon, DairyProcessingIcon, MilkHandlingIcon, PaneerIcon, FermentedIcon, EvaporationIcon, IceCreamIcon, CipIcon, EtpIcon, GheeIcon, ButterIcon, CheeseIcon, MarketIcon, PackagingDevIcon, SensoryIcon, HygieneIcon, MaintenanceIcon, HrIcon, SecurityIcon, AccountsIcon, StoreIcon, ComputerIcon, AutomationIcon, UtilitiesIcon, SafetyIcon, LegalIcon, NewProductIcon, BrandingIcon, SalesIcon, DigitalMarketingIcon, ColdChainIcon, ExportIcon, StartupIcon, FarmingIcon, AboutIcon } from '@/components/icons';
-import { StandardizationIModal } from '@/components/calculators/standardization-i-modal';
-import { VariousCalculatorsModal } from '@/components/calculators/various-calculators-modal';
-import { ProductionCalculationsModal } from '@/components/calculators/production-calculations-modal';
-import { StandardizationIIModal } from '@/components/calculators/standardization-ii-modal';
-import { AdulterationModal } from '@/components/info-modals/adulteration-modal';
-import { SolutionsPrepModal } from '@/components/calculators/solutions-prep-modal';
-import { FermentedProductsModal } from '@/components/info-modals/fermented-products-modal';
-import { DairyProcessingModal } from '@/components/info-modals/dairy-processing-modal';
-import { FssaiStandardsModal } from '@/components/info-modals/fssai-standards-modal';
-import { AuditsModal } from '@/components/info-modals/audits-modal';
-import { ValidationVerificationModal } from '@/components/info-modals/validation-verification-modal';
-import { CalibrationStandardizationModal } from '@/components/info-modals/calibration-standardization-modal';
-import { LabEquipmentsModal } from '@/components/info-modals/lab-equipments-modal';
-import { MilkChemistryModal } from '@/components/info-modals/milk-chemistry-modal';
-import { CompositionalAnalysisModal } from '@/components/info-modals/compositional-analysis-modal';
-import { WaterTestingModal } from '@/components/info-modals/water-testing-modal';
-import { PackagingMaterialTestingModal } from '@/components/info-modals/packaging-material-testing-modal';
-import { MilkHandlingPreservationModal } from '@/components/info-modals/milk-handling-preservation-modal';
-import { PaneerProcessingModal } from '@/components/info-modals/paneer-processing-modal';
-import { EvaporationDryingModal } from '@/components/info-modals/evaporation-drying-modal';
-import { IceCreamProductionModal } from '@/components/info-modals/ice-cream-production-modal';
-import { CipProcessModal } from '@/components/info-modals/cip-process-modal';
-import { EtpModal } from '@/components/info-modals/etp-modal';
-import { AboutUsModal } from '@/components/info-modals/about-us-modal';
-import { ExpertSupportModal } from '@/components/info-modals/expert-support-modal';
-import { DairyIndustryModal } from "@/components/info-modals/dairy-industry-modal";
-import { QualityConceptModal } from "@/components/info-modals/quality-concept-modal";
-import { MicrobiologyTestingModal } from "@/components/info-modals/microbiology-testing-modal";
-import { PlantCostModal } from '@/components/calculators/plant-cost-modal';
-
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  Factory,
+  FlaskConical,
+  Beaker,
+  Scale,
+  Calculator,
+  Settings,
+  Users,
+  TestTube,
+  ClipboardCheck,
+  CheckSquare,
+  Droplet,
+  PackageCheck,
+  Lock,
+  DollarSign,
+  Microscope,
+  Recycle,
+  Bug,
+  ShieldCheck,
+  FileSpreadsheet,
+  Search,
+  Wind,
+  GraduationCap,
+  Atom,
+  Combine,
+  ShieldAlert,
+} from "lucide-react";
+import { PaneerIcon, IceCreamIcon, ReagentIcon } from "@/components/icons";
+import { Input } from "@/components/ui/input";
+import { DairyIndustryModal } from "./info-modals/dairy-industry-modal";
+import { MilkChemistryModal } from "./info-modals/milk-chemistry-modal";
+import { AdulterationModal } from "./info-modals/adulteration-modal";
+import { StandardizationIModal } from "./calculators/standardization-i-modal";
+import { StandardizationIIModal } from "./calculators/standardization-ii-modal";
+import { SolutionsPrepModal } from "./calculators/solutions-prep-modal";
+import { PaneerProcessingModal } from "./info-modals/paneer-processing-modal";
+import { DairyProcessingModal } from "./info-modals/dairy-processing-modal";
+import { AboutUsModal } from "./info-modals/about-us-modal";
+import { CompositionalAnalysisModal } from "./info-modals/compositional-analysis-modal";
+import { CalibrationStandardizationModal } from "./info-modals/calibration-standardization-modal";
+import { QualityConceptModal } from "./info-modals/quality-concept-modal";
+import { WaterTestingModal } from "./info-modals/water-testing-modal";
+import { PackagingMaterialTestingModal } from "./info-modals/packaging-material-testing-modal";
+import { LabEquipmentsModal } from "./info-modals/lab-equipments-modal";
+import { CipProcessModal } from "./info-modals/cip-process-modal";
+import { MicrobiologyTestingModal } from "./info-modals/microbiology-testing-modal";
+import { MilkHandlingPreservationModal } from "./info-modals/milk-handling-preservation-modal";
+import { FssaiStandardsModal } from "./info-modals/fssai-standards-modal";
+import { VariousCalculatorsModal } from "./calculators/various-calculators-modal";
+import { FermentedProductsModal } from "./info-modals/fermented-products-modal";
+import { EvaporationDryingModal } from "./info-modals/evaporation-drying-modal";
+import { AuditsModal } from "./info-modals/audits-modal";
+import { ValidationVerificationModal } from "./info-modals/validation-verification-modal";
+import { EtpModal } from "./info-modals/etp-modal";
+import { IceCreamProductionModal } from "./info-modals/ice-cream-production-modal";
+import { ExpertSupportModal } from "./info-modals/expert-support-modal";
+import { ProductionCalculationsModal } from "./calculators/production-calculations-modal";
 
 type Topic = {
   id: string;
   title: string;
-  icon: React.ComponentType<{ className: string }>;
-  modal: React.ComponentType<{ isOpen: boolean; setIsOpen: (isOpen: boolean) => void; }>;
+  description: string;
+  category: string;
+  icon: React.ElementType;
+  badge?: string;
+  modal: React.ElementType;
+  isPro: boolean;
+  color: string;
 };
 
+// ## FIX: Topics ko aapke diye gaye sequence ke anusaar reorder kiya gaya hai ##
 const topics: Topic[] = [
-  { id: 'dairy-industry', title: 'Dairy Industry', icon: IndianDairyIcon, modal: DairyIndustryModal },
-  { id: 'fssai-standards', title: 'FSSAI Standards', icon: FssaiIcon, modal: FssaiStandardsModal },
-  { id: 'quality-concepts', title: 'Quality Concepts', icon: QualityIcon, modal: QualityConceptModal },
-  { id: 'milk-microbiology', title: 'Milk Microbiology', icon: MicrobiologyIcon, modal: MicrobiologyTestingModal },
-  { id: 'audits-guides', title: 'Audits Guides', icon: AuditIcon, modal: AuditsModal },
-  { id: 'validation-verification', title: 'Validation & Verification', icon: ValidationIcon, modal: ValidationVerificationModal },
-  { id: 'expert-support', title: 'Expert Support', icon: ExpertIcon, modal: ExpertSupportModal },
-  { id: 'calibration-standardization', title: 'Calibration', icon: CalibrationIcon, modal: CalibrationStandardizationModal },
-  { id: 'lab-equipments', title: 'Lab Equipments', icon: LabEquipIcon, modal: LabEquipmentsModal },
-  { id: 'milk-chemistry', title: 'Milk Chemistry', icon: MilkChemistryIcon, modal: MilkChemistryModal },
-  { id: 'lab-calculations', title: 'Lab Calculations', icon: LabCalcIcon, modal: VariousCalculatorsModal },
-  { id: 'production-calculations', title: 'Production Calculations', icon: ProductionCalcIcon, modal: ProductionCalculationsModal },
-  { id: 'adulteration-tests', title: 'Adulteration Tests', icon: AdulterationIcon, modal: AdulterationModal },
-  { id: 'solutions-preparation', title: 'Solutions Preparation', icon: SolutionPrepIcon, modal: SolutionsPrepModal },
-  { id: 'compositional-analysis', title: 'Compositional Analysis', icon: CompositionIcon, modal: CompositionalAnalysisModal },
-  { id: 'water-testing', title: 'Water Testing', icon: WaterTestIcon, modal: WaterTestingModal },
-  { id: 'packaging-material-testing', title: 'Packaging Material Testing', icon: PackagingIcon, modal: PackagingMaterialTestingModal },
-  { id: 'milk-standardization-i', title: 'Milk Standardization I', icon: MilkStandardizationIcon, modal: StandardizationIModal },
-  { id: 'milk-standardization-ii', title: 'Milk Standardization II', icon: AdvancedStandardizationIcon, modal: StandardizationIIModal },
-  { id: 'dairy-processing', title: 'Dairy Processing', icon: DairyProcessingIcon, modal: DairyProcessingModal },
-  { id: 'milk-handling-preservation', title: 'Milk Handling & Preservation', icon: MilkHandlingIcon, modal: MilkHandlingPreservationModal },
-  { id: 'paneer-processing', title: 'Paneer Processing', icon: PaneerIcon, modal: PaneerProcessingModal },
-  { id: 'fermented-products', title: 'Fermented Products', icon: FermentedIcon, modal: FermentedProductsModal },
-  { id: 'evaporation-drying', title: 'Evaporation & Drying', icon: EvaporationIcon, modal: EvaporationDryingModal },
-  { id: 'ice-cream-production', title: 'Ice-Cream Production', icon: IceCreamIcon, modal: IceCreamProductionModal },
-  { id: 'cip-process', title: 'CIP Process', icon: CipIcon, modal: CipProcessModal },
-  { id: 'etp', title: 'ETP', icon: EtpIcon, modal: EtpModal },
-  { id: 'about-us', title: 'About Us', icon: AboutIcon, modal: AboutUsModal },
-  { id: 'plant-cost-analysis', title: 'Plant Cost Analysis', icon: LabCalcIcon, modal: PlantCostModal },
+  { id: 'industry', title: 'Dairy Industry', description: 'Overview & Trends', category: 'production', icon: Factory, badge: 'New', modal: DairyIndustryModal, isPro: false, color: 'from-blue-100 to-indigo-200' },
+  { id: 'fssai-standards', title: 'FSSAI Standards', description: 'Official Dairy Standards', category: 'quality', icon: ShieldCheck, badge: 'New', modal: FssaiStandardsModal, isPro: false, color: 'from-green-100 to-teal-200' },
+  { id: 'quality-concept', title: 'Quality Concepts', description: 'HACCP, TQM, ISO', category: 'quality', icon: CheckSquare, modal: QualityConceptModal, isPro: false, color: 'from-teal-100 to-cyan-200' },
+  { id: 'microbiology', title: 'Microbiology', description: 'Testing & Pathogens', category: 'quality', icon: Bug, badge: 'New', modal: MicrobiologyTestingModal, isPro: true, color: 'from-purple-100 to-violet-200' },
+  { id: 'audits', title: 'Audits', description: 'Internal & External Audits', category: 'quality', icon: ClipboardCheck, badge: 'New', modal: AuditsModal, isPro: true, color: 'from-rose-100 to-red-200' },
+  { id: 'validation-verification', title: 'Validation & Verification', description: 'Food Safety Assurance', category: 'quality', icon: ClipboardCheck, badge: 'New', modal: ValidationVerificationModal, isPro: true, color: 'from-violet-100 to-fuchsia-200' },
+  { id: 'expert-support', title: 'Expert Support', description: 'AI & Real Expert Advice', category: 'production', icon: GraduationCap, badge: 'AI', modal: ExpertSupportModal, isPro: true, color: 'from-orange-100 to-amber-200' },
+  { id: 'calibration', title: 'Calibration', description: 'Glassware & Reagents', category: 'quality', icon: ClipboardCheck, modal: CalibrationStandardizationModal, isPro: false, color: 'from-red-100 to-orange-200' },
+  { id: 'lab-equipments', title: 'Lab Equipments', description: 'Principles & Working', category: 'quality', icon: Microscope, badge: 'Pro', modal: LabEquipmentsModal, isPro: true, color: 'from-gray-200 to-blue-200' },
+  { id: 'milk-chemistry', title: 'Milk Chemistry', description: 'Composition & Properties', category: 'quality', icon: Atom, modal: MilkChemistryModal, isPro: false, color: 'from-red-100 to-rose-200' },
+  { id: 'lab-calculations', title: 'Lab Calculations', description: 'Yield, Acidity, etc.', category: 'quality', icon: FileSpreadsheet, badge: 'Updated', modal: VariousCalculatorsModal, isPro: false, color: 'from-orange-100 to-red-200' },
+  { id: 'production-calculations', title: 'Production Calculations', description: 'Batch & Yield Calculations', category: 'production', icon: Combine, modal: ProductionCalculationsModal, isPro: true, color: 'from-violet-100 to-purple-200' },
+  { id: 'adulteration', title: 'Adulteration', description: 'Detection & Prevention', category: 'quality', icon: ReagentIcon, badge: 'Updated', modal: AdulterationModal, isPro: false, color: 'from-yellow-100 to-amber-200' },
+  { id: 'solutions-prep', title: 'Solutions Preparation', description: 'Reagents & Calculators', category: 'quality', icon: Beaker, modal: SolutionsPrepModal, isPro: false, color: 'from-emerald-100 to-green-200' },
+  { id: 'compositional-analysis', title: 'Compositional Analysis', description: 'Chemical tests for products', category: 'quality', icon: TestTube, modal: CompositionalAnalysisModal, isPro: false, color: 'from-indigo-100 to-purple-300' },
+  { id: 'water-testing', title: 'Water Testing', description: 'WTP/ETP Analysis', category: 'quality', icon: Droplet, modal: WaterTestingModal, isPro: true, color: 'from-blue-200 to-sky-300' },
+  { id: 'packaging-testing', title: 'Packaging Testing', description: 'Quality tests for materials', category: 'quality', icon: PackageCheck, modal: PackagingMaterialTestingModal, isPro: true, color: 'from-amber-100 to-yellow-200' },
+  { id: 'std1', title: 'Standardization I', description: 'Basic Principles', category: 'process', icon: Scale, modal: StandardizationIModal, isPro: false, color: 'from-sky-100 to-cyan-200' },
+  { id: 'std2', title: 'Advanced Standardization', description: 'Advanced Blending', category: 'process', icon: Calculator, modal: StandardizationIIModal, isPro: false, color: 'from-fuchsia-100 to-purple-200' },
+  { id: 'processing', title: 'Dairy Processing', description: 'Techniques & Machinery', category: 'process', icon: Settings, modal: DairyProcessingModal, isPro: false, color: 'from-gray-100 to-gray-300' },
+  { id: 'milk-handling', title: 'Milk Handling', description: 'Reception & Preservation', category: 'process', icon: Droplet, badge: 'New', modal: MilkHandlingPreservationModal, isPro: false, color: 'from-cyan-100 to-sky-200' },
+  { id: 'paneer-production', title: 'Paneer Processing', description: 'Process & Yield', category: 'production', icon: PaneerIcon, modal: PaneerProcessingModal, isPro: false, color: 'from-lime-100 to-yellow-200' },
+  { id: 'fermented-products', title: 'Fermented Products', description: 'Yogurt, Dahi & More', category: 'production', icon: ReagentIcon, badge: 'New', modal: FermentedProductsModal, isPro: true, color: 'from-pink-100 to-fuchsia-200' },
+  { id: 'evaporation-drying', title: 'Evaporation & Drying', description: 'Condensed & Powdered Milk', category: 'production', icon: Wind, badge: 'New', modal: EvaporationDryingModal, isPro: true, color: 'from-indigo-100 to-blue-200' },
+  { id: 'ice-cream-production', title: 'Ice-Cream Production', description: 'Process & Science', category: 'production', icon: IceCreamIcon, modal: IceCreamProductionModal, isPro: true, color: 'from-rose-100 to-pink-200' },
+  { id: 'cip-process', title: 'CIP Process', description: 'Cleaning-In-Place Guide', category: 'process', icon: Recycle, badge: 'New', modal: CipProcessModal, isPro: true, color: 'from-blue-100 to-cyan-300' },
+  { id: 'etp', title: 'ETP', description: 'Wastewater Treatment', category: 'process', icon: Recycle, badge: 'New', modal: EtpModal, isPro: true, color: 'from-green-100 to-lime-200' },
+  { id: 'about-us', title: 'About Us', description: 'Our Mission & Vision', category: 'production', icon: Users, modal: AboutUsModal, isPro: false, color: 'from-slate-100 to-stone-200' },
+];
+
+const filters = [
+  { label: "All", value: "all" },
+  { label: "Production", value: "production" },
+  { label: "Process", value: "process" },
+  { label: "Quality", value: "quality" },
 ];
 
 export function TopicGrid() {
+  const [activeFilter, setActiveFilter] = useState("all");
+  const [searchTerm, setSearchTerm] = useState("");
   const [activeModal, setActiveModal] = useState<string | null>(null);
 
-  const openModal = (id: string) => setActiveModal(id);
-  const closeModal = () => setActiveModal(null);
+  const filteredTopics = topics.filter((topic) => {
+    const matchesFilter = activeFilter === "all" || topic.category === activeFilter;
+    const matchesSearch = topic.title.toLowerCase().includes(searchTerm.toLowerCase()) || topic.description.toLowerCase().includes(searchTerm.toLowerCase());
+    return matchesFilter && matchesSearch;
+  });
 
-  const getCardClass = (index: number) => {
-    const delay = index * 50; // 50ms delay per card
-    return `card-enter card-enter-active`;
+  const openModal = (id: string) => {
+    setActiveModal(id);
   };
 
   return (
     <>
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-        {topics.map((topic, index) => (
-          <div
-            key={topic.id}
-            className={`flex flex-col items-center justify-center text-center p-4 rounded-xl shadow-md cursor-pointer transition-transform duration-300 hover:scale-105 hover:shadow-lg bg-white/60 dark:bg-gray-800/60 backdrop-blur-sm border border-gray-200/50 dark:border-gray-700/50 ${getCardClass(index)}`}
-            onClick={() => openModal(topic.id)}
-            style={{ animationDelay: `${index * 50}ms` }}
-          >
-            <topic.icon className="h-12 w-12 text-primary dark:text-sky-400 mb-2" />
-            <h3 className="font-headline text-sm font-semibold text-gray-700 dark:text-gray-200">{topic.title}</h3>
-          </div>
-        ))}
+      <div className="mb-8 space-y-4">
+        <div className="relative">
+          <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+          <Input
+            type="text"
+            placeholder="Search topics..."
+            className="w-full pl-10 pr-4 py-2 rounded-full shadow-sm bg-white"
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </div>
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
+          {filters.map((filter) => (
+            <Button
+              key={filter.value}
+              variant={activeFilter === filter.value ? "default" : "secondary"}
+              onClick={() => setActiveFilter(filter.value)}
+              className="rounded-full px-5 transition-all shadow-sm data-[variant=default]:shadow-lg"
+            >
+              {filter.label}
+            </Button>
+          ))}
+        </div>
       </div>
 
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4 sm:gap-6">
+        {filteredTopics.map((topic, index) => {
+          return (
+            <div
+              key={topic.id}
+              onClick={() => openModal(topic.id)}
+              className="bg-card p-4 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center relative overflow-hidden group cursor-pointer"
+            >
+              {topic.badge && <Badge variant={topic.badge === 'Pro' ? 'default' : 'destructive'} className="absolute top-2 right-2 text-xs px-1.5 py-0.5 h-auto animate-pulse">{topic.badge}</Badge>}
+              <div className={`w-16 h-16 mx-auto mb-3 rounded-full flex items-center justify-center bg-gradient-to-br ${topic.color}`}>
+                <topic.icon className="w-8 h-8 text-primary" />
+              </div>
+              <h3 className="font-headline font-semibold text-card-foreground text-sm leading-tight">{topic.title}</h3>
+              <p className="hidden sm:block text-xs text-muted-foreground mt-1">{topic.description}</p>
+            </div>
+          )
+        })}
+      </div>
+      
       {topics.map(topic => {
-        const ModalComponent = topic.modal;
-        return (
-          <ModalComponent
-            key={`${topic.id}-modal`}
-            isOpen={activeModal === topic.id}
-            setIsOpen={closeModal}
-          />
-        );
+          const ModalComponent = topic.modal;
+          if (!ModalComponent) return null;
+          return <ModalComponent key={`${topic.id}-modal`} isOpen={activeModal === topic.id} setIsOpen={() => setActiveModal(null)} />
       })}
     </>
   );

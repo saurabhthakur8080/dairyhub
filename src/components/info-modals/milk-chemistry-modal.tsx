@@ -42,6 +42,11 @@ const Section = ({ title, icon: Icon, children }: { title: string, icon: React.E
 
 // Content Components
 function CompositionContent({ content }: { content: any }) {
+    const combinedRows = content.composition.generalComposition.rows.flatMap((row: any) => [
+        { c: row.c1, v: row.v1 },
+        { c: row.c2, v: row.v2 }
+    ]).filter((item: any) => item.c && item.v);
+
     return (
         <Section title={content.composition.title} icon={BookOpen}>
             <InfoBlock title={content.composition.whatIsMilk.title}>
@@ -60,15 +65,15 @@ function CompositionContent({ content }: { content: any }) {
                     <Table>
                         <TableHeader>
                             <TableRow>
-                                <TableHead>{content.composition.generalComposition.headers[0]}</TableHead><TableHead>{content.composition.generalComposition.headers[1]}</TableHead>
-                                <TableHead>{content.composition.generalComposition.headers[2]}</TableHead><TableHead>{content.composition.generalComposition.headers[3]}</TableHead>
+                                <TableHead>{content.composition.generalComposition.headers[0]}</TableHead>
+                                <TableHead className="text-right">{content.composition.generalComposition.headers[1]}</TableHead>
                             </TableRow>
                         </TableHeader>
                         <TableBody>
-                            {content.composition.generalComposition.rows.map((row: any, i: number) => (
+                            {combinedRows.map((row: any, i: number) => (
                                 <TableRow key={i}>
-                                    <TableCell>{row.c1}</TableCell><TableCell>{row.v1}</TableCell>
-                                    <TableCell>{row.c2}</TableCell><TableCell>{row.v2}</TableCell>
+                                    <TableCell>{row.c}</TableCell>
+                                    <TableCell className="text-right">{row.v}</TableCell>
                                 </TableRow>
                             ))}
                         </TableBody>
