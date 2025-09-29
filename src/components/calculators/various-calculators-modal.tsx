@@ -2,7 +2,7 @@
       
 "use client";
 
-import { useState, useMemo, memo, useCallback } from "react";
+import { useState, memo, useCallback, useEffect, useMemo } from "react"
 import {
   Dialog,
   DialogContent,
@@ -796,17 +796,17 @@ function PointBasedPricingCalc() {
 
 
 function CreamCalculators() {
-    const [activeCalc, setActiveCalc] = useState('fat-percent');
+    const [activeCalc, setActiveCalc] = useState('cream-dilution');
 
     const renderCalculator = () => {
         switch (activeCalc) {
+            case 'fat-percent':
+                return <CreamFatCalc />;
             case 'actual-snf':
                 return <ActualCreamSnfCalc />;
-            case 'diluted-snf':
-                return <DilutedCreamSnfCalc />;
-            case 'fat-percent':
+            case 'cream-dilution':
             default:
-                return <CreamFatCalc />;
+                return <CreamDilutionCalc />;
         }
     };
     
@@ -819,9 +819,9 @@ function CreamCalculators() {
                         <SelectValue placeholder="Select a calculator" />
                     </SelectTrigger>
                     <SelectContent>
+                        <SelectItem value="cream-dilution">Cream Dilution (by Water)</SelectItem>
                         <SelectItem value="fat-percent">Fat %</SelectItem>
                         <SelectItem value="actual-snf">Actual SNF</SelectItem>
-                        <SelectItem value="diluted-snf">Diluted SNF</SelectItem>
                     </SelectContent>
                 </Select>
             </div>
@@ -890,34 +890,67 @@ function ActualCreamSnfCalc() {
     );
 }
 
-function DilutedCreamSnfCalc() {
-    const [initialSnf, setInitialSnf] = useState('5.5');
-    const [initialWeight, setInitialWeight] = useState('100');
-    const [waterWeight, setWaterWeight] = useState('');
+function CreamDilutionCalc() {
+    const [inputs, setInputs] = useState({
+        initialQty: '100',
+        initialFat: '40',
+        targetFat: '30'
+    });
     const [result, setResult] = useState<string | null>(null);
+    const [error, setError] = useState<string | null>(null);
 
-    const calculate = () => {
-        const iSnf = parseFloat(initialSnf);
-        const iWeight = parseFloat(initialWeight);
-        const wWeight = parseFloat(waterWeight);
-        if (isNaN(iSnf) || isNaN(iWeight) || isNaN(wWeight) || iWeight <= 0 || wWeight < 0) {
-            setResult("Please enter valid positive numbers for all fields.");
+    const handleInputChange = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setInputs(prev => ({...prev, [name]: value}));
+    }, []);
+
+    const calculate = useCallback(() => {
+        setResult(null);
+        setError(null);
+
+        const initialQty = parseFloat(inputs.initialQty);
+        const initialFat = parseFloat(inputs.initialFat);
+        const targetFat = parseFloat(inputs.targetFat);
+
+        if ([initialQty, initialFat, targetFat].some(isNaN) || initialQty <= 0) {
+            setError("Please fill all fields with valid positive numbers.");
             return;
         }
-        const finalWeight = iWeight + wWeight;
-        const finalSnf = (iSnf * iWeight) / finalWeight;
-        setResult(`Final SNF of Diluted Cream: <strong>${finalSnf.toFixed(2)}%</strong>`);
-    };
+
+        if (initialFat <= targetFat) {
+            setError("Target Fat % must be lower than the Initial Fat %.");
+            return;
+        }
+        if (targetFat <= 0) {
+             setError("Target Fat % must be a positive number.");
+            return;
+        }
+
+        const waterToAdd = initialQty * (initialFat / targetFat - 1);
+        const finalVolume = initialQty + waterToAdd;
+
+        setResult(`To dilute <strong>${initialQty} kg</strong> of <strong>${initialFat}%</strong> fat cream to <strong>${targetFat}%</strong>, you need to add:<br/><strong class="text-green-700 text-xl">${waterToAdd.toFixed(2)} kg</strong> of Water.<br/>The final volume will be <strong>${finalVolume.toFixed(2)} kg</strong>.`);
+    }, [inputs]);
 
     return (
         <div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <div><Label>Initial Cream SNF %</Label><Input type="number" value={initialSnf} onChange={e => setInitialSnf(e.target.value)} placeholder="e.g., 5.5" /></div>
-                <div><Label>Initial Cream Weight (kg)</Label><Input type="number" value={initialWeight} onChange={e => setInitialWeight(e.target.value)} placeholder="e.g., 100" /></div>
-                <div><Label>Water Added (kg)</Label><Input type="number" value={waterWeight} onChange={e => setWaterWeight(e.target.value)} placeholder="e.g., 20" /></div>
+            <div className="bg-muted/50 p-4 rounded-lg space-y-4">
+                 <div>
+                    <Label htmlFor="initialQty">Initial Cream Quantity (kg)</Label>
+                    <Input id="initialQty" name="initialQty" type="number" value={inputs.initialQty} onChange={handleInputChange} />
+                 </div>
+                 <div>
+                    <Label htmlFor="initialFat">Initial Cream Fat %</Label>
+                    <Input id="initialFat" name="initialFat" type="number" value={inputs.initialFat} onChange={handleInputChange} />
+                 </div>
+                 <div>
+                    <Label htmlFor="targetFat">Target Cream Fat %</Label>
+                    <Input id="targetFat" name="targetFat" type="number" value={inputs.targetFat} onChange={handleInputChange} />
+                 </div>
             </div>
-            <Button onClick={calculate} className="w-full mt-4">Calculate Final SNF %</Button>
-            {result && <Alert className="mt-4"><AlertDescription className="text-lg font-bold text-center" dangerouslySetInnerHTML={{ __html: result }} /></Alert>}
+            <Button onClick={calculate} className="w-full mt-4">Calculate Water to Add</Button>
+            {error && <Alert variant="destructive" className="mt-4"><AlertDescription>{error}</AlertDescription></Alert>}
+            {result && <Alert className="mt-4"><AlertTitle>Result</AlertTitle><AlertDescription dangerouslySetInnerHTML={{__html: result}} /></Alert>}
         </div>
     );
 }
