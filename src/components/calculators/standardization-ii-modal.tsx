@@ -1,3 +1,4 @@
+
 "use client"
 
 import { useState, memo, useCallback, useEffect, useMemo } from "react"
@@ -145,15 +146,10 @@ const MemoizedInputField = memo(function InputField({ label, value, name, setter
 });
 
 const snfFormulas: Record<string, { name: string; formulaText: string; calc: (clr: number, fat: number, c?: number) => number; inverse: (snf: number, fat: number, c?: number) => number }> = {
+    'richmond': { name: "Richmond's Formula", formulaText: 'SNF % = (CLR/4) + (0.2 * Fat) + 0.72', calc: (clr, fat) => (clr / 4) + (0.2 * fat) + 0.72, inverse: (snf, fat) => (snf - (0.2 * fat) - 0.72) * 4 },
     'isi': { name: 'ISI / BIS (Official)', formulaText: 'SNF % = (CLR/4) + (0.25 * Fat) + 0.44', calc: (clr, fat) => (clr / 4) + (0.25 * fat) + 0.44, inverse: (snf, fat) => (snf - (0.25 * fat) - 0.44) * 4 },
-    'richmond': { name: 'Richmond’s Formula', formulaText: 'SNF % = (CLR/4) + (0.21 * Fat) + 0.36', calc: (clr, fat) => (clr / 4) + (0.21 * fat) + 0.36, inverse: (snf, fat) => (snf - (0.21 * fat) - 0.36) * 4 },
-    'new_formula': { name: 'New Formula', formulaText: 'SNF % = (CLR/4) + (0.21 * Fat) + 0.29', calc: (clr, fat) => (clr / 4) + (0.21 * fat) + 0.29, inverse: (snf, fat) => (snf - (0.21 * fat) - 0.29) * 4 },
     'cooperative': { name: 'Modified ISI / Cooperative', formulaText: 'SNF % = (CLR/4) + (0.25 * Fat) + 0.14', calc: (clr, fat) => (clr / 4) + (0.25 * fat) + 0.14, inverse: (snf, fat) => (snf - (0.25 * fat) - 0.14) * 4 },
-    'dairy_union': { name: 'Simplified Dairy Union', formulaText: 'SNF % = (CLR/4) + (Fat/5) + 0.44', calc: (clr, fat) => (clr / 4) + (fat / 5) + 0.44, inverse: (snf, fat) => (snf - (fat/5) - 0.44) * 4 },
-    'punjab_haryana': { name: 'Punjab / Haryana Variation', formulaText: 'SNF % = (CLR/4) + (0.22 * Fat) + 0.36', calc: (clr, fat) => (clr / 4) + (0.22 * fat) + 0.36, inverse: (snf, fat) => (snf - (0.22 * fat) - 0.36) * 4 },
-    'andhra': { name: 'Andhra Pradesh Practice', formulaText: 'SNF % = (CLR/4) + (0.21 * Fat) + 0.35', calc: (clr, fat) => (clr / 4) + (0.21 * fat) + 0.35, inverse: (snf, fat) => (snf - (0.21 * fat) - 0.35) * 4 },
-    'karnataka_tamil': { name: 'Karnataka / Tamil Nadu Practice', formulaText: 'SNF % = (CLR/4) + (0.25 * Fat) + 0.20', calc: (clr, fat) => (clr / 4) + (0.25 * fat) + 0.20, inverse: (snf, fat) => (snf - (0.25 * fat) - 0.20) * 4 },
-    'general': { name: 'General Shortcut (Variable C)', formulaText: 'SNF % = (CLR/4) + (0.25 * Fat) + C', calc: (clr, fat, c = 0.72) => (clr / 4) + (0.25 * fat) + c, inverse: (snf, fat, c = 0.72) => (snf - (0.25 * fat) - c) * 4 },
+    'general': { name: 'General Shortcut (Custom Factor)', formulaText: 'SNF % = (CLR/4) + (0.25 * Fat) + C', calc: (clr, fat, c = 0.72) => (clr / 4) + (0.25 * fat) + c, inverse: (snf, fat, c = 0.72) => (snf - (0.25 * fat) - c) * 4 },
 };
 
 function FatSnfClrTsCalc() {
@@ -161,6 +157,7 @@ function FatSnfClrTsCalc() {
         fat: '4.5',
         clr: '28.0',
         snf: '8.94',
+        customC: "0.72"
     });
     const [result, setResult] = useState<{ snf: string, clr: string, ts: string } | null>(null);
     const [formula, setFormula] = useState('isi');
@@ -178,16 +175,17 @@ function FatSnfClrTsCalc() {
         let newSnf = NaN, newTs = NaN, newClr = NaN;
         
         const selectedFormula = snfFormulas[formula] || snfFormulas['isi'];
+        const customFactor = parseFloat(inputs.customC);
 
         if (basis === 'fat_clr') {
             if (!isNaN(fat) && !isNaN(clr)) {
-                newSnf = selectedFormula.calc(clr, fat);
+                newSnf = formula === 'general' ? selectedFormula.calc(clr, fat, customFactor) : selectedFormula.calc(clr, fat);
                 newTs = newSnf + fat;
                 newClr = clr;
             }
         } else if (basis === 'fat_snf') {
             if (!isNaN(fat) && !isNaN(snf)) {
-                newClr = selectedFormula.inverse(snf, fat);
+                newClr = formula === 'general' ? selectedFormula.inverse(snf, fat, customFactor) : selectedFormula.inverse(snf, fat);
                 newTs = snf + fat;
                 newSnf = snf;
             }
@@ -220,6 +218,11 @@ function FatSnfClrTsCalc() {
                         </SelectContent>
                     </Select>
                 </div>
+                 {formula === 'general' && (
+                    <div className="mt-2">
+                        <MemoizedInputField label="Custom Correction Factor (C)" value={inputs.customC} name="customC" setter={handleInputChange} />
+                    </div>
+                 )}
                  <div>
                     <Label>Calculate based on:</Label>
                     <Select value={basis} onValueChange={(val: 'fat_clr' | 'fat_snf') => setBasis(val)}>
