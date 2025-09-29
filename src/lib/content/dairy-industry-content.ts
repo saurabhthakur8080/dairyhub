@@ -3,31 +3,31 @@ export const dairyIndustryContent = {
     hi: {
       main_title: "Indian Dairy Industry",
       description: "Ek global leader ka comprehensive overview",
-      intro1: "Bharat ka dairy industry ek important economic pillar hai, jo global milk production mein leading role nibhata hai. 2024 mein <strong>INR 18.97 Trillion (USD 135.30 Billion)</strong> ke estimated market size ke saath, yeh sector 2033 tak <strong>INR 57.00 Trillion (USD 274.09 Billion)</strong> tak pahunchne ka anuman hai, jo <strong>9.33% se 14.00%</strong> ki compound annual growth rate (CAGR) dikhata hai. Yeh industry national Gross Domestic Product (GDP) mein 4-5% ka contribution karti hai aur 80 million se adhik rural parivaron ko livelihood pradan karti hai, jismein badi sankhya mein mahilaayein bhi shaamil hain.",
-      intro2: "Is sector ki growth mukhya roop se badhti population, badhti income aur badhti health consciousness se prerit hai, jisse value-added products ki maang mein vriddhi hui hai. Dairy cooperatives, vishesh roop se Dr. Verghese Kurien ke 'Operation Flood' ke durdarshi netritva mein sthapit Anand Pattern model, is industry ki reedh rahi hain. Yeh sahakari samitiyan kisanon ko direct market access, technical sahayata aur financial empowerment pradan karti hain, jisse rural income mein vriddhi hoti hai aur social equality ko badhava milta hai.",
+      intro1: "Bharat का dairy industry एक important economic pillar है, जो global milk production में leading role निभाता है। 2024 में <strong>INR 18.97 Trillion (USD 135.30 Billion)</strong> के estimated market size के साथ, यह sector 2033 तक <strong>INR 57.00 Trillion (USD 274.09 Billion)</strong> तक पहुंचने का अनुमान है, जो <strong>9.33% से 14.00%</strong> की compound annual growth rate (CAGR) दिखाता है। यह industry national Gross Domestic Product (GDP) में 4-5% का contribution करती है और 80 million से अधिक rural परिवारों को livelihood प्रदान करती है, जिसमें बड़ी संख्या में महिलाएं भी शामिल हैं।",
+      intro2: "इस sector की growth मुख्य रूप से बढ़ती population, बढ़ती income और बढ़ती health consciousness से प्रेरित है, जिससे value-added products की मांग में वृद्धि हुई है। Dairy cooperatives, विशेष रूप से Dr. Verghese Kurien के 'Operation Flood' के दूरदर्शी नेतृत्व में स्थापित Anand Pattern model, इस industry की रीढ़ रही हैं। ये सहकारी समितियां किसानों को direct market access, technical सहायता और financial empowerment प्रदान करती हैं, जिससे ग्रामीण आय में वृद्धि होती है और social equality को बढ़ावा मिलता है।",
       overview: {
-        title: "Indian Dairy Industry ka Overview",
+        title: "Indian Dairy Industry का Overview",
         market_size: {
-          title: "Market Size aur Growth Path",
-          text: "Indian dairy industry apni vishaalta aur dynamic growth ke liye famous hai, jo desh ki agricultural economy ka ek important component hai. 2024 mein, is industry ka market size <strong>INR 18.97 Trillion</strong> (lagbhag USD 135.30 Billion) tak pahunch gaya. Aage dekhte hue, industry ke 2033 tak <strong>INR 57.00 Trillion</strong> (lagbhag USD 274.09 Billion) tak pahunchne ka anuman hai, jo <strong>9.33% se 14.00%</strong> ki uchch compound annual growth rate (CAGR) ke saath ek majboot vistaar ka avsar darshata hai."
+          title: "Market Size और Growth Path",
+          text: "Indian dairy industry अपनी विशालता और dynamic growth के लिए famous है, जो देश की agricultural economy का एक important component है। 2024 में, इस industry का market size <strong>INR 18.97 Trillion</strong> (लगभग USD 135.30 Billion) तक पहुंच गया। आगे देखते हुए, industry के 2033 तक <strong>INR 57.00 Trillion</strong> (लगभग USD 274.09 Billion) तक पहुंचने का अनुमान है, जो <strong>9.33% से 14.00%</strong> की उच्च compound annual growth rate (CAGR) के साथ एक मजबूत विस्तार का अवसर दर्शाता है।"
         },
         contribution: {
-          title: "National Economy mein Contribution",
-          text: "Dairy sector Indian economy mein ek mahatvapurna bhoomika nibhata hai, jo national Gross Domestic Product (GDP) mein lagbhag <strong>4-5%</strong> ka yogdaan deta hai. Yeh seedhe <strong>80 million se adhik grameen parivaron</strong> ko aajeevika pradan karta hai, jinmein se adhikaansh chhote aur seemaant kisan hain, aur grameen samudayon mein mahilaon ko mahatvapurna roop se sashakt banata hai."
+          title: "National Economy में Contribution",
+          text: "Dairy sector Indian economy में एक महत्वपूर्ण भूमिका निभाता है, जो national Gross Domestic Product (GDP) में लगभग <strong>4-5%</strong> का योगदान देता है। यह सीधे <strong>80 million से अधिक ग्रामीण परिवारों</strong> को आजीविका प्रदान करता है, जिनमें से अधिकांश छोटे और सीमांत किसान हैं, और ग्रामीण समुदायों में महिलाओं को महत्वपूर्ण रूप से सशक्त बनाता है।"
         },
         production_trends: {
-          title: "Milk Production aur Consumption ke Trends",
-          text1: "India duniya ka sabse bada doodh utpadak hai, jo vaishvik doodh utpadan ka <strong>23-24%</strong> hissa hai. Doodh utpadan mein 2014-15 mein 146.31 million tonnes (MT) se 2023-24 mein 239.3 MT tak 5.62% ki CAGR dekhi gayi hai. Prati vyakti doodh ki uplabdhta mein kafi sudhar hua hai, jo 2022-23 mein <strong>459 gram prati din</strong> tak pahunch gayi hai, jo 322 gram prati din ke vaishvik ausat se kafi adhik hai.",
-          text2: "Uttar Pradesh sabse bada doodh utpadak rajya hai. Bhains doodh utpadan mein 45.32% par haavi hain, lekin swadeshi aur gair-varnit gayon ke utpadan mein ullekhaneeya vriddhi hui hai."
+          title: "Milk Production और Consumption के Trends",
+          text1: "India दुनिया का सबसे बड़ा दूध उत्पादक है, जो वैश्विक दूध उत्पादन का <strong>23-24%</strong> हिस्सा है। दूध उत्पादन में 2014-15 में 146.31 million tonnes (MT) से 2023-24 में 239.3 MT तक 5.62% की CAGR देखी गई है। प्रति व्यक्ति दूध की उपलब्धता में काफी सुधार हुआ है, जो 2022-23 में <strong>459 gram प्रति दिन</strong> तक पहुंच गई है, जो 322 gram प्रति दिन के वैश्विक औसत से काफी अधिक है।",
+          text2: "Uttar Pradesh सबसे बड़ा दूध उत्पादक राज्य है। भैंस दूध उत्पादन में 45.32% पर हावी हैं, लेकिन स्वदेशी और गैर-वर्णित गायों के उत्पादन में उल्लेखनीय वृद्धि हुई है।"
         },
         drivers_challenges: {
-          title: "Key Drivers, Challenges aur Opportunities",
-          drivers: "<strong>Drivers:</strong> Growth population growth, badhti income aur badhti health consciousness se prerit hai. Rashtriya Pashu Rog Niyantran Karyakram aur Pashupalan Avsanrachna Vikas Nidhi jaisi sarkaari pehlein bhi mahatvapurna sahayata pradan karti hain.",
-          challenges: "<strong>Challenges:</strong> Key challenges mein doodh utpadan vriddhi mein mandi, prati pashu kam utpadakta (India: 987 kg/dugdhkal vs Global: 2038 kg/dugdhkal), uchch chara lagat, gambhir chara ki kami aur jalvayu parivartan ke prabhav shaamil hain.",
-          opportunities: "<strong>Opportunities:</strong> Value-added products (paneer, dahi, ice cream), tezi se badhte A2 doodh bazaar aur dakshata laabh ke liye praudyogiki ka labh uthane mein mahatvapurna avsar hain. Sangathit niji khiladiyon aur D2C space mein startups ke liye bhi apaar sambhavnayein hain.",
+          title: "Key Drivers, Challenges और Opportunities",
+          drivers: "<strong>Drivers:</strong> Growth population growth, बढ़ती income और बढ़ती health consciousness से प्रेरित है। राष्ट्रीय पशु रोग नियंत्रण कार्यक्रम और पशुपालन अवसंरचना विकास निधि जैसी सरकारी पहलें भी महत्वपूर्ण सहायता प्रदान करती हैं।",
+          challenges: "<strong>Challenges:</strong> Key challenges में दूध उत्पादन वृद्धि में मंदी, प्रति पशु कम उत्पादकता (India: 987 kg/dugdhkal vs Global: 2038 kg/dugdhkal), उच्च चारा लागत, गंभीर चारे की कमी और जलवायु परिवर्तन के प्रभाव शामिल हैं।",
+          opportunities: "<strong>Opportunities:</strong> Value-added products (paneer, dahi, ice cream), तेजी से बढ़ते A2 दूध बाजार और दक्षता लाभ के लिए प्रौद्योगिकी का लाभ उठाने में महत्वपूर्ण अवसर हैं। संगठित निजी खिलाड़ियों और D2C space में startups के लिए भी अपार संभावनाएं हैं।",
           table: {
-            header1: "Visheshta",
-            header2: "Vivaran",
+            header1: "विशेषता",
+            header2: "विवरण",
             row1_col1: "Market Size (2024)",
             row1_col2: "INR 18.97 Trillion / USD 135.30 Billion",
             row2_col1: "Projected Market Size (by 2033/2034)",
@@ -35,67 +35,67 @@ export const dairyIndustryContent = {
             row3_col1: "Total Milk Production (2023-24)",
             row3_col2: "239.3 Million Tonnes",
             row4_col1: "India's Share in Global Milk Production",
-            row4_col2: "23-24% (Duniya mein sabse bada)",
+            row4_col2: "23-24% (दुनिया में सबसे बड़ा)",
             row5_col1: "Per Capita Milk Availability (2022-23)",
             row5_col2: "459 grams per day"
           }
         }
       },
       cooperatives: {
-        title: "Dairy Cooperatives ki Bhoomika",
+        title: "Dairy Cooperatives की भूमिका",
         operation_flood: {
-          title: "Operation Flood aur White Revolution",
-          text: "Bharat mein Operation Flood, jise White Revolution ke roop mein bhi jaana jaata hai, 1970 ke dashak mein Bharat ko doodh utpadan mein aatmanirbhar banane ke liye shuru kiya gaya tha. Dr. Verghese Kurien ko Bharat mein White Revolution ka janak maana jaata hai. White Revolution doodh utpadan mein tez vriddhi se judi hai. Operation Flood ne dairy kisanon ko apne swayam ke vikas ko nirdeshit karne mein madad ki hai, jo unke dwara banaye gaye sansadhanon par niyantran unke apne haathon mein rakhta hai. Ek rashtriya doodh grid poore Bharat mein doodh utpadakon ko 700 se adhik kasbon aur shaharon mein upbhoktaon se jodta hai, jisse mausami aur kshetriya moolya bhinnataein kam hoti hain, jabki yeh sunishchit hota hai ki utpadak ko niyamit aadhar par pardarshi tareeke se uchit bazaar moolya mile.",
+          title: "Operation Flood और White Revolution",
+          text: "भारत में Operation Flood, जिसे White Revolution के रूप में भी जाना जाता है, 1970 के दशक में भारत को दूध उत्पादन में आत्मनिर्भर बनाने के लिए शुरू किया गया था। Dr. Verghese Kurien को भारत में White Revolution का जनक माना जाता है। White Revolution दूध उत्पादन में तेज वृद्धि से जुड़ी है। Operation Flood ने dairy किसानों को अपने स्वयं के विकास को निर्देशित करने में मदद की है, जो उनके द्वारा बनाए गए संसाधनों पर नियंत्रण उनके अपने हाथों में रखता है। एक राष्ट्रीय दूध ग्रिड पूरे भारत में दूध उत्पादकों को 700 से अधिक कस्बों और शहरों में उपभोक्ताओं से जोड़ता है, जिससे मौसमी और क्षेत्रीय मूल्य भिन्नताएं कम होती हैं, जबकि यह सुनिश्चित होता है कि उत्पादक को नियमित आधार पर पारदर्शी तरीके से उचित बाजार मूल्य मिले।",
           objectives_title: "Objectives:",
           objectives: [
-            "Doodh utpadan badhana ('a flood of milk')",
-            "Grameen aay mein vriddhi",
-            "Consumers ke liye uchit moolya"
+            "दूध उत्पादन बढ़ाना ('a flood of milk')",
+            "ग्रामीण आय में वृद्धि",
+            "Consumers के लिए उचित मूल्य"
           ],
-          phases_title: "Operation Flood ke Phases:",
+          phases_title: "Operation Flood के Phases:",
           phases: [
-            "<strong>Phase I (1970-1980):</strong> World Food Programme ke madhyam se European Union (tab European Economic Community) dwara daan kiye gaye skimmed milk powder aur butter oil ki bikri se finance kiya gaya.",
-            "<strong>Phase II (1981-1985):</strong> Milkshed ko 18 se badhakar 136 kiya gaya; shahari bazaaron ne doodh ke outlet ko 290 tak badhaya. 1985 ke ant tak, 4.25 million doodh utpadakon ke saath 43,000 gram sahakari samitiyon ki ek aatmanirbhar pranali ko cover kiya gaya tha.",
-            "<strong>Phase III (1985-1996):</strong> Dairy sahakari samitiyon ko doodh ki badhti maatra ki khareed aur vipanan ke liye aavashyak buniyadi dhaanche ka vistaar aur majbooti karne mein saksham banaya. Is charan mein 30,000 nayi dairy sahakari samitiyan jodi gayin, jisse 73,000 ho gayin."
+            "<strong>Phase I (1970-1980):</strong> World Food Programme के माध्यम से European Union (तब European Economic Community) द्वारा दान किए गए skimmed milk powder और butter oil की बिक्री से finance किया गया।",
+            "<strong>Phase II (1981-1985):</strong> Milkshed को 18 से बढ़ाकर 136 किया गया; शहरी बाजारों ने दूध के outlet को 290 तक बढ़ाया। 1985 के अंत तक, 4.25 million दूध उत्पादकों के साथ 43,000 ग्राम सहकारी समितियों की एक आत्मनिर्भर प्रणाली को cover किया गया था।",
+            "<strong>Phase III (1985-1996):</strong> Dairy cooperatives को दूध की बढ़ती मात्रा की खरीद और विपणन के लिए आवश्यक बुनियादी ढांचे का विस्तार और मजबूती करने में सक्षम बनाया। इस चरण में 30,000 नई dairy सहकारी समितियां जोड़ी गईं, जिससे 73,000 हो गईं।"
           ]
         },
         anand_pattern: {
           title: "Anand Pattern: Three-Tier Structure",
-          intro: "Operation Flood ki safalta Anand Pattern par bani hai, jo ek three-tier cooperative structure hai:",
+          intro: "Operation Flood की सफलता Anand Pattern पर बनी है, जो एक three-tier cooperative structure है:",
           tiers: [
-            "<strong>Village Dairy Cooperative Society (DCS):</strong> Aadhar unit jahan kisan doodh bechte hain, quality ke aadhar par payment ke saath.",
-            "<strong>District Cooperative Milk Producers' Union:</strong> DCS ke ownership mein, yeh doodh utpadon ka processing aur marketing karta hai.",
-            "<strong>State Federation:</strong> Ek rajya mein unions ke liye top marketing body."
+            "<strong>Village Dairy Cooperative Society (DCS):</strong> आधार इकाई जहां किसान दूध बेचते हैं, quality के आधार पर payment के साथ।",
+            "<strong>District Cooperative Milk Producers' Union:</strong> DCS के ownership में, यह दूध उत्पादों का processing और marketing करता है।",
+            "<strong>State Federation:</strong> एक राज्य में unions के लिए top marketing body."
           ]
         },
         empowerment: {
-          title: "Farmer Empowerment aur Socio-Economic Prabhav",
-          text: "Cooperatives doodh marketing pranali mein sudhar, sadasyon ke liye kisanon ki aay mein ausatan 20% ki vriddhi karne mein sabse mahatvapurna kadam rahi hain. Ve pashu chikitsa dekhbhal, AI aur santulit chara jaisi mahatvapurna sahayata pradan karte hain. Is model ne kai mahila netritva wali samitiyan sthapit karke mahilaon ko gehrai se sashakt banaya hai aur jaati jaisi samajik badhaon ko todne mein madad ki hai."
+          title: "Farmer Empowerment और Socio-Economic प्रभाव",
+          text: "Cooperatives दूध marketing प्रणाली में सुधार, सदस्यों के लिए किसानों की आय में औसतन 20% की वृद्धि करने में सबसे महत्वपूर्ण कदम रही हैं। वे पशु चिकित्सा देखभाल, AI और संतुलित चारा जैसी महत्वपूर्ण सहायता प्रदान करते हैं। इस model ने कई महिला नेतृत्व वाली समितियां स्थापित करके महिलाओं को गहराई से सशक्त बनाया है और जाति जैसी सामाजिक बाधाओं को तोड़ने में मदद की है।"
         }
       },
       trends: {
-        title: "Naye Trends: Modernization aur Startups",
+        title: "Naye Trends: Modernization और Startups",
         modernization: {
-          title: "Modernization Initiatives aur Technological Progress",
-          text: "Industry <strong>Automated Milking Systems (AMS)</strong>, livestock management ke liye IoT devices (smart collars, rumen bolus), aur AI-sanchalit precision feeding jaisi advanced technologies ko apna raha hai. Blockchain quality assurance aur traceability ke liye ubhar raha hai. 'White Revolution 2.0' aur Animal Husbandry Infrastructure Development Fund (AHIDF) jaisi sarkaari yojanaein is parivartan ko aur aage badha rahi hain."
+          title: "Modernization Initiatives और Technological Progress",
+          text: "Industry <strong>Automated Milking Systems (AMS)</strong>, livestock management के लिए IoT devices (smart collars, rumen bolus), और AI-संचालित precision feeding जैसी advanced technologies को अपना रहा है। Blockchain quality assurance और traceability के लिए उभर रहा है। 'White Revolution 2.0' और Animal Husbandry Infrastructure Development Fund (AHIDF) जैसी सरकारी योजनाएं इस परिवर्तन को और आगे बढ़ा रही हैं।"
         },
         startups: {
-          title: "Dairy Startups ka Uday aur Innovation",
-          text1: "B2C startups dwara direct-to-consumer (D2C) delivery ke liye digital platform ka labh uthane ke saath ek mahatvapurna badlav ho raha hai. Yeh startups value-added aur niche utpadon par dhyan kendrit karte hain, jo aadhunik upbhoktaon ki suvidha aur swasthya ki maang ko poora karte hain.",
-          text2: "Pramukh startups mein <strong>Country Delight, Stellapps, Happy Milk aur Milk Mantra</strong> shaamil hain, jo grahakon ko seedhe taaza, jaivik ya vishesh dairy utpad dene ke liye innovative models ka upyog kar rahe hain."
+          title: "Dairy Startups का उदय और Innovation",
+          text1: "B2C startups द्वारा direct-to-consumer (D2C) delivery के लिए digital platform का लाभ उठाने के साथ एक महत्वपूर्ण बदलाव हो रहा है। यह startups value-added और niche उत्पादों पर ध्यान केंद्रित करते हैं, जो आधुनिक उपभोक्ताओं की सुविधा और स्वास्थ्य की मांग को पूरा करते हैं।",
+          text2: "प्रमुख startups में <strong>Country Delight, Stellapps, Happy Milk और Milk Mantra</strong> शामिल हैं, जो ग्राहकों को सीधे ताजा, जैविक या विशेष dairy उत्पाद देने के लिए innovative models का उपयोग कर रहे हैं।"
         }
       },
       exports: {
         title: "Dairy Export Status",
         status: {
-          title: "Vartaman Export Status aur Chunautiyan",
-          text1: "Sabse bada utpadak hone ke bawajood, global dairy trade mein Bharat ki hissedari 0.25% se bhi kam hai. Vitt varsh 2023-24 mein, niryat lagbhag <strong>INR 2,260.94 crore (USD 272.64 million)</strong> tha. Primary export products ghee aur makkhan (59.32%) hain, iske baad doodh powder aur paneer hain.",
-          text2: "Niryat mukhya roop se uchch gharelu khapat aur vyapar nitiyon ke kaaran seemit hai jo gharelu kisanon ko videshi pratispardha se bachati hain. Mukhya niryat bazaar padosi desh aur madhya purva hain, jinmein sanyukt arab amirat, bangladesh aur saudi arab shaamil hain."
+          title: "वर्तमान Export Status और चुनौतियां",
+          text1: "सबसे बड़ा उत्पादक होने के बावजूद, global dairy trade में भारत की हिस्सेदारी 0.25% से भी कम है। वित्त वर्ष 2023-24 में, निर्यात लगभग <strong>INR 2,260.94 crore (USD 272.64 million)</strong> था। Primary export products ghee और मक्खन (59.32%) हैं, इसके बाद दूध powder और पनीर हैं।",
+          text2: "निर्यात मुख्य रूप से उच्च घरेलू खपत और व्यापार नीतियों के कारण सीमित है जो घरेलू किसानों को विदेशी प्रतिस्पर्धा से बचाती हैं। मुख्य निर्यात बाजार पड़ोसी देश और मध्य पूर्व हैं, जिनमें संयुक्त अरब अमीरात, बांग्लादेश और सऊदी अरब शामिल हैं।"
         }
       },
       conclusion: {
-        title: "Nishkarsh aur Future ka Drishtikon",
-        text: "Indian dairy industry mein apaar sambhavnayein hain. Bhavishya ka vikas prati pashu kam utpadakta, uchch chara lagat aur buniyadi dhaanche ki kami jaisi pramukh chunautiyon ko door karne par nirbhar karta hai. Genetic sudhar, sustainable practices, takneeki apnane aur cold chain ko majboot karne par dhyan kendrit karne wala ek multi-dimensional drishtikon aavashyak hai. Innovation ka labh uthakar aur in badhaon ko door karke, Bharat ek global dairy leader ke roop mein apni sthiti ko majboot kar sakta hai, jisse lakhon logon ke liye khadya suraksha aur aarthik samriddhi sunishchit ho sake."
+        title: "निष्कर्ष और Future का दृष्टिकोण",
+        text: "Indian dairy industry में अपार संभावनाएं हैं। भविष्य का विकास प्रति पशु कम उत्पादकता, उच्च चारा लागत और बुनियादी ढांचे की कमी जैसी प्रमुख चुनौतियों को दूर करने पर निर्भर करता है। Genetic सुधार, sustainable practices, तकनीकी अपनाने और cold chain को मजबूत करने पर ध्यान केंद्रित करने वाला एक multi-dimensional दृष्टिकोण आवश्यक है। Innovation का लाभ उठाकर और इन बाधाओं को दूर करके, भारत एक global dairy leader के रूप में अपनी स्थिति को मजबूत कर सकता है, जिससे लाखों लोगों के लिए खाद्य सुरक्षा और आर्थिक समृद्धि सुनिश्चित हो सके।"
       }
     },
     en: {
@@ -199,5 +199,7 @@ export const dairyIndustryContent = {
 };
 
 
+
+    
 
     
