@@ -1,196 +1,196 @@
 
 export const calibrationStandardizationContent = {
   hi: {
-    mainTitle: "कैलिब्रेशन और मानकीकरण",
-    description: "डेयरी प्रयोगशाला में सटीक माप सुनिश्चित करने के लिए एक गाइड।",
-    backToTopics: "विषयों पर वापस जाएं",
-    intro_p1: "<strong>कैलिब्रेशन</strong> का मतलब है किसी मापने वाले उपकरण (measuring equipment) की तुलना एक मानक उपकरण से करना जिसका माप पहले से ही सही माना गया हो। इससे यह पता चलता है कि हमारा उपकरण कितना सटीक (accurate) है। इसमें समायोजन शामिल नहीं होता, लेकिन यह समायोजन की आवश्यकता को दिखा सकता है।",
-    intro_p2: "डेयरी संयंत्र में, दूध की संरचना (वसा, एसएनएफ, आदि) और गुणवत्ता को स्वागत से लेकर प्रेषण तक कई बार विश्लेषण किया जाता है। यह उत्पाद की सही कीमत, प्रसंस्करण के लिए उसकी उपयुक्तता, और कानूनी मानकों (legal standards) को पूरा करने के लिए आवश्यक है। इसलिए, विश्लेषण में उपयोग होने से पहले कांच के बने पदार्थ (ब्यूटिरोमीटर, पिपेट, आदि) और रसायनों का अंशांकन और मानकीकरण बहुत महत्वपूर्ण है, ताकि गलत परिणामों से बचा जा सके।",
+    mainTitle: "Calibration और Standardization",
+    description: "Dairy प्रयोगशाला में sateek maap sunishchit karne ke liye ek guide.",
+    backToTopics: "Topics पर वापस जाएं",
+    intro_p1: "<strong>Calibration</strong> का मतलब है किसी measuring equipment की तुलना एक standard equipment से करना जिसका maap pehle से ही सही maana गया हो। इससे यह पता चलता है कि हमारा equipment कितना sateek (accurate) है। इसमें adjustment शामिल नहीं होता, लेकिन यह adjustment की zaroorat को दिखा सकता है।",
+    intro_p2: "Dairy plant में, milk की संरचना (fat, SNF, आदि) और quality को swagat से लेकर dispatch tak kai baar analyze kiya jaata hai. यह product की sahi keemat, processing ke liye uski upyuktata, और legal standards को poora karne ke liye zaroori hai. इसलिए, analysis में उपयोग होने से pehle glassware (butyrometer, pipette, आदि) और chemicals का calibration और standardization बहुत महत्वपूर्ण है, ताकि galat parinaamon se bacha ja sake.",
     tabs: {
         definitions: "मुख्य परिभाषाएं",
-        pipette: "पिपेट कैलिब्रेशन",
-        butyrometer: "ब्यूटिरोमीटर कैलिब्रेशन",
-        lactometer: "लैक्टोमीटर कैलिब्रेशन",
-        other: "अन्य कांच के बने पदार्थ",
-        thermometer: "थर्मामीटर कैलिब्रेशन",
-        balance: "वजन संतुलन"
+        pipette: "Pipette Calibration",
+        butyrometer: "Butyrometer Calibration",
+        lactometer: "Lactometer Calibration",
+        other: "अन्य Glassware",
+        thermometer: "Thermometer Calibration",
+        balance: "Weighing Balance"
     },
     definitions: {
         title: "मुख्य परिभाषाएं",
-        reagent: "अभिकर्मक",
+        reagent: "अभिकर्मक (Reagent)",
         reagent_desc: "एक पदार्थ जो दूसरे पदार्थ के साथ प्रतिक्रिया करके रासायनिक बदलाव लाता है।",
         solution: "घोल (Solution)",
-        solution_desc: "घोल दो या दो से अधिक पदार्थों का एक सजातीय मिश्रण है। जिसमें एक विलेय (जो कम मात्रा में हो) और एक विलायक (जो अधिक मात्रा में हो) होता है।",
-        dilute_sol: "<strong>पतला घोल:</strong> जिसमें विलेय की मात्रा कम हो।",
-        concentrated_sol: "<strong>सांद्र घोल:</strong> जिसमें विलेय की मात्रा अधिक हो।",
-        saturated_sol: "<strong>संतृप्त घोल:</strong> जिसमें एक निश्चित तापमान पर और विलेय न घुल सके।",
-        standard_sol: "मानक घोल",
-        standard_sol_desc: "एक ऐसा घोल जिसकी शक्ति या सांद्रता बिल्कुल सही पता हो।",
-        normal_sol: "सामान्य घोल (Normality - N)",
-        normal_sol_desc: "यह 1 लीटर घोल में घुले हुए विलेय के ग्राम समकक्ष की संख्या है। <code>N = विलेय का ग्राम समकक्ष / घोल का आयतन (L)</code>।",
-        normal_sol_formula: "ग्राम समकक्ष वजन = <code>दाढ़ द्रव्यमान / n-कारक</code>। (n-कारक एसिड के लिए H+ आयनों की संख्या और बेस के लिए OH- आयनों की संख्या होती है)।",
-        molar_sol: "मोलर घोल (Molarity - M)",
-        molar_sol_desc: "यह 1 लीटर घोल में घुले हुए विलेय के मोल्स की संख्या है। <code>M = विलेय के मोल्स / घोल का आयतन (L)</code>।",
-        molal_sol: "मोलल घोल (Molality - m)",
-        molal_sol_desc: "यह 1000g (1 kg) विलायक में घुले हुए विलेय के मोल्स की संख्या है। <code>m = विलेय के मोल्स की संख्या / विलायक का वजन (kg)</code>।",
-        note: "ध्यान दें: सामान्यता और मोलरता तापमान पर निर्भर करती हैं क्योंकि आयतन तापमान के साथ बदलता है, जबकि मोललता तापमान से स्वतंत्र है।"
+        solution_desc: "Solution दो या दो से अधिक padarthon का एक homogeneous mishran है। जिसमें एक solute (जो kam matra में हो) और एक solvent (जो adhik matra में हो) होता है।",
+        dilute_sol: "<strong>Dilute Solution:</strong> जिसमें solute की matra kam हो।",
+        concentrated_sol: "<strong>Concentrated Solution:</strong> जिसमें solute की matra adhik हो।",
+        saturated_sol: "<strong>Saturated Solution:</strong> जिसमें एक nishchit taapman पर और solute na ghul sake.",
+        standard_sol: "Standard Solution",
+        standard_sol_desc: "एक ऐसा solution jiski shakti ya concentration bilkul sahi pata ho.",
+        normal_sol: "Normal Solution (Normality - N)",
+        normal_sol_desc: "यह 1 litre solution में ghule hue solute के gram equivalent की संख्या है। <code>N = gram equivalent of solute / volume of solution (L)</code>।",
+        normal_sol_formula: "Gram equivalent weight = <code>Molar mass / n-factor</code>। (n-factor acid के लिए H+ ions की संख्या और base के लिए OH- ions की संख्या होती है)।",
+        molar_sol: "Molar Solution (Molarity - M)",
+        molar_sol_desc: "यह 1 litre solution में ghule hue solute के moles की संख्या है। <code>M = moles of solute / volume of solution (L)</code>।",
+        molal_sol: "Molal Solution (Molality - m)",
+        molal_sol_desc: "यह 1000g (1 kg) solvent में ghule hue solute के moles की संख्या है। <code>m = No. of moles of solute / weight of solvent (kg)</code>।",
+        note: "Note: Normality और Molarity taapman पर nirbhar karti hain kyunki volume taapman ke saath badalta hai, jabki Molality taapman se swatantra hai."
     },
     pipette: {
-        title: "दूध पिपेट का अंशांकन",
+        title: "Milk Pipette का Calibration",
         comparison: {
-            title: "(ए) तुलना विधि (Comparison Method)",
-            desc: "इस विधि में, एक नई पिपेट से दूध का वसा परीक्षण करके उसकी तुलना एक पुरानी, पहले से अंशांकित पिपेट के परिणाम से की जाती है। यदि दोनों का परिणाम समान आता है, तो नई पिपेट सही मानी जाती है। यह सबसे आसान लेकिन कम सटीक तरीका है।"
+            title: "(ए) Comparison Method",
+            desc: "Is method में, एक नई pipette से दूध का fat test करके uski tulna ek purani, pehle se calibrated pipette ke parinaam se ki jaati hai. Yadi dono ka parinaam samaan aata hai, toh nayi pipette sahi maani jaati hai. Yeh sabse aasan lekin kam sateek tareeka hai."
         },
         bis: {
-            title: "(बी) बीआईएस विधि (Gravimetric Method)",
+            title: "(बी) BIS Method (Gravimetric Method)",
             desc: "यह सबसे सटीक विधि है। इसमें यह जांचा जाता है कि पिपेट 27°C पर <strong>10.75 ± 0.03 मिलीलीटर</strong> आसुत जल वितरित करती है या नहीं।",
             steps: [
-                "पिपेट को साफ करके 27°C आसुत जल से निशान के ऊपर तक भरें।",
-                "मेनिस्कस को निशान पर समायोजित करें।",
-                "पानी को एक पहले से तौले हुए बीकर में वितरित करें।",
-                "पानी के साथ बीकर को तौलें और पानी का वजन (द्रव्यमान) निकालें।",
-                "आयतन की गणना करें: <code>आयतन = द्रव्यमान / घनत्व</code>। 27°C पर पानी का घनत्व 0.99654 g/mL होता है।",
-                "यदि गणना किया गया आयतन 10.72 मिलीलीटर से 10.78 मिलीलीटर के बीच है, तो पिपेट सही है।"
+                "Pipette को saaf karke 27°C distilled water से nishaan ke upar tak bharein.",
+                "Meniscus को nishaan par adjust karein.",
+                "Paani ko ek pehle se tole hue beaker mein vitrit karein.",
+                "Paani ke saath beaker ko tolein aur paani ka vajan (mass) nikalein.",
+                "Volume ki ganana karein: <code>Volume = Mass / Density</code>। 27°C par paani ka density 0.99654 g/mL hota hai.",
+                "Yadi ganana kiya gaya volume 10.72 milliliter se 10.78 milliliter ke beech hai, toh pipette sahi hai."
             ]
         },
         mathematical: {
-            title: "(सी) गणितीय विधि (Mathematical Method)",
-            desc: "इस विधि में पिपेट के तने की प्रति इकाई लंबाई का आयतन गणना किया जाता है और फिर दो अस्थायी बिंदुओं के माप के आधार पर 10.75 मिलीलीटर का सही बिंदु निर्धारित करके एक स्थायी निशान लगाया जाता है।"
+            title: "(सी) Mathematical Method",
+            desc: "Is method mein pipette ke stem ki prati unit lambai ka volume ganana kiya jaata hai aur phir do asthayi binduon ke maap ke aadhar par 10.75 milliliter ka sahi bindu nirdharit karke ek sthayi nishaan lagaya jaata hai."
         }
     },
     butyrometer: {
-        title: "ब्यूटिरोमीटर का अंशांकन",
+        title: "Butyrometer का Calibration",
         principle: {
-            title: "सिद्धांत",
-            desc: "ब्यूटिरोमीटर अंशांकन का मुख्य सिद्धांत यह है कि इसके तने (पतली नली) पर बने निशान एक निश्चित आयतन को दर्शाते हैं। <strong>दूध ब्यूटिरोमीटर</strong> के लिए, प्रत्येक <strong>1% वसा का निशान 0.125 मिलीलीटर</strong> के आंतरिक आयतन के बराबर होता है। इसलिए, 0 से 10% तक की पूरी पैमाने का आयतन 1.25 मिलीलीटर होना चाहिए। अंशांकन में हम इसी आयतन की जांच करते हैं। इसके लिए आमतौर पर शुद्ध पारा (mercury) का उपयोग किया जाता है क्योंकि यह कांच से नहीं चिपकता है और इसका घनत्व बहुत अधिक होता है।"
+            title: "Siddhant",
+            desc: "Butyrometer calibration का mukhya siddhant yeh hai ki iske stem (patli nali) par bane nishaan ek nishchit volume ko darshate hain. <strong>Milk Butyrometer</strong> ke liye, har ek <strong>1% fat ka nishaan 0.125 milliliter</strong> ke aantarik volume ke barabar hota hai. Isliye, 0 se 10% tak ki poori scale ka volume 1.25 milliliter hona chahiye. Calibration mein hum isi volume ki jaanch karte hain. Iske liye aam taur par shuddh para (mercury) ka upyog kiya jaata hai kyunki yeh kaanch se nahi chipakta hai aur iska density bahut adhik hota hai."
         },
         methods: {
-            title: "अंशांकन के विभिन्न तरीके",
+            title: "Calibration के विभिन्न तरीके",
             comparison: {
-                title: "1. तुलना विधि",
-                desc: "यह सबसे आसान तरीका है। इसमें एक ही दूध के नमूने का वसा दो अलग-अलग ब्यूटिरोमीटर में परीक्षण किया जाता है:",
-                points: ["एक पहले से अंशांकित (मानक) ब्यूटिरोमीटर।", "एक नया ब्यूटिरोमीटर जिसे अंशांकित करना है।"],
-                conclusion: "यदि दोनों ब्यूटिरोमीटर में वसा की रीडिंग समान आती है, तो नए ब्यूटिरोमीटर को सही मान लिया जाता है। लेकिन यह विधि बहुत सटीक नहीं है क्योंकि पुराना (मानक) ब्यूटिरोमीटर भी सही नहीं हो सकता है।"
+                title: "1. Comparison Method",
+                desc: "Yeh sabse aasan tareeka hai. Ismein ek hi doodh ke namoone ka fat do alag-alag butyrometer mein test kiya jaata hai:",
+                points: ["एक pehle se calibrated (standard) butyrometer.", "एक naya butyrometer jise calibrate karna hai."],
+                conclusion: "Yadi dono butyrometer mein fat ki reading samaan aati hai, toh naye butyrometer ko sahi maan liya jaata hai. Lekin yeh vidhi bahut sateek nahi hai kyunki purana (standard) butyrometer bhi sahi nahi ho sakta hai."
             },
             bis: {
-                title: "2. बीआईएस विधि (Mercury Pipette Method)",
-                desc: "यह एक अधिक सटीक और मानक तरीका है। इसमें एक विशेष प्रकार की स्वचालित पारा पिपेट का उपयोग किया जाता है जो एक बार में ठीक <strong>0.3125 मिलीलीटर</strong> पारा वितरित करती है। यह आयतन ब्यूटिरोमीटर के <strong>2.5% वसा पैमाने</strong> के बराबर होता है।",
+                title: "2. BIS Method (Mercury Pipette Method)",
+                desc: "Yeh ek adhik sateek aur standard tareeka hai. Ismein ek vishesh prakaar ki automatic mercury pipette ka upyog kiya jaata hai jo ek baar mein theek <strong>0.3125 milliliter</strong> mercury vitrit karti hai. Yeh volume butyrometer ke <strong>2.5% fat scale</strong> ke barabar hota hai.",
                 steps: [
-                    "ब्यूटिरोमीटर को साफ करके सुखा लें।",
-                    "ब्यूटिरोमीटर को 10% के निशान तक पारा से भरें। इसे हम आधार (शून्य) बिंदु मानते हैं।",
-                    "पारा पिपेट से 0.3125 मिलीलीटर पारा ब्यूटिरोमीटर में डालें। पारा का स्तर 10% से 7.5% तक आ जाना चाहिए।",
-                    "इस प्रक्रिया को 3 बार और दोहराएं। हर बार पारा 2.5% पैमाने को भरेगा (7.5% -> 5.0% -> 2.5% -> 0%)।",
-                    "यदि 4 बार पारा डालने पर ब्यूटिरोमीटर का पैमाना 0 से 10% तक पूरी तरह से सही-सही भर जाता है, तो ब्यूटिरोमीटर अंशांकित माना जाता है।"
+                    "Butyrometer ko saaf karke sukha lein.",
+                    "Butyrometer ko 10% ke nishaan tak mercury se bharein. Ise hum aadhaar (zero) bindu maante hain.",
+                    "Mercury pipette se 0.3125 milliliter mercury butyrometer mein daalein. Mercury ka star 10% se 7.5% tak aa jaana chahiye.",
+                    "Is prakriya ko 3 baar aur dohraayein. Har baar mercury 2.5% scale ko bharega (7.5% -> 5.0% -> 2.5% -> 0%).",
+                    "Yadi 4 baar mercury daalne par butyrometer ka scale 0 se 10% tak poori tarah se sahi-sahi bhar jaata hai, toh butyrometer calibrated maana jaata hai."
                 ]
             },
             gravimetric: {
-                title: "3. ग्रेविमेट्रिक विधि (पारा तौलकर)",
-                desc: "यह सबसे सटीक तरीका है। इसमें अलग-अलग निशानों के बीच पारा का वजन करके आयतन निकाला जाता है।",
+                title: "3. Gravimetric Method (Mercury तौलकर)",
+                desc: "Yeh sabse sateek tareeka hai. Ismein alag-alag nishaanon ke beech mercury ka vajan karke volume nikala jaata hai.",
                 steps: [
-                    "एक साफ, सूखे ब्यूटिरोमीटर को तौलें।",
-                    "उसमें 10% के निशान तक पारा भरें और दोबारा तौलें।",
-                    "अब 9% के निशान तक पारा भरें और फिर तौलें। दोनों वजनों के अंतर से 9% और 10% के बीच पारा का वजन पता चल जाएगा।",
-                    "पारा के घनत्व (जो तापमान पर निर्भर करता है) का उपयोग करके, इस वजन को आयतन में बदलें: <code>आयतन = द्रव्यमान / घनत्व</code>।",
-                    "यह आयतन <strong>0.125 ± 0.001 मिलीलीटर</strong> के बीच होना चाहिए (1% वसा के लिए)।",
-                    "इसी प्रकार, ब्यूटिरोमीटर के पैमाने पर 2-3 अलग-अलग बिंदुओं (जैसे 5-6% और 1-2%) पर इस परीक्षण को दोहराएं ताकि पूरे पैमाने की सटीकता जांची जा सके।"
+                    "Ek saaf, sukhe butyrometer ko tolein.",
+                    "Usmein 10% ke nishaan tak mercury bharein aur dobara tolein.",
+                    "Ab 9% ke nishaan tak mercury bharein aur phir tolein. Dono vajanon ke antar se 9% aur 10% ke beech mercury ka vajan pata chal jayega.",
+                    "Mercury ke density (jo taapman par nirbhar karta hai) ka upyog karke, is vajan ko volume mein badalein: <code>Volume = Mass / Density</code>.",
+                    "Yeh volume <strong>0.125 ± 0.001 milliliter</strong> ke beech hona chahiye (1% fat ke liye).",
+                    "Isi prakaar, butyrometer ke scale par 2-3 alag-alag binduon (jaise 5-6% aur 1-2%) par is test ko dohraayein taaki poore scale ki sateekta jaanchi jaa sake."
                 ]
             }
         },
         table: {
-            caption: "तालिका 6.1: विभिन्न उत्पादों के लिए ब्यूटिरोमीटर के प्रकार",
-            header1: "पैमाना सीमा (%)",
-            header2: "उत्पाद",
+            caption: "Table 6.1: विभिन्न उत्पादों के लिए ब्यूटिरोमीटर के प्रकार",
+            header1: "Scale Range (%)",
+            header2: "उत्पाद (Product)",
             rows: [
-                { scale: "0–0.5", product: "स्किम्ड दूध" },
-                { scale: "0–4", product: "आंशिक रूप से स्किम्ड दूध, छाछ" },
-                { scale: "0–10", product: "साबुत दूध, वाष्पित दूध (बिना मीठा)" },
-                { scale: "0–20", product: "सूखा दूध पाउडर" },
-                { scale: "0–40", product: "आइसक्रीम, संघनित दूध, पनीर" },
-                { scale: "0–70", product: "क्रीम" },
-                { scale: "0–90", product: "मक्खन" }
+                { scale: "0–0.5", product: "Skimmed milk" },
+                { scale: "0–4", product: "Partly skimmed milk, buttermilk" },
+                { scale: "0–10", product: "Whole milk, evaporated milk (unsweetened)" },
+                { scale: "0–20", product: "Dry milk powder" },
+                { scale: "0–40", product: "Ice cream, condensed milk, cheese" },
+                { scale: "0–70", product: "Cream" },
+                { scale: "0–90", product: "Butter" }
             ]
         }
     },
     lactometer: {
-        title: "लैक्टोमीटर का अंशांकन",
+        title: "Lactometer का Calibration",
         principle: {
-            title: "सिद्धांत",
-            desc1: "लैक्टोमीटर <strong>आर्किमिडीज के सिद्धांत</strong> पर काम करते हैं: जब कोई वस्तु किसी तरल में डुबोई जाती है, तो उस पर ऊपर की ओर एक बल लगता है जो उस वस्तु द्वारा हटाए गए तरल के भार के बराबर होता है। लैक्टोमीटर तरल के विशिष्ट गुरुत्व को मापता है। दूध जितना गाढ़ा होगा (अधिक SNF), लैक्टोमीटर उतना ही कम डूबेगा और रीडिंग अधिक आएगी। पानी मिलाने पर दूध पतला हो जाता है, जिससे लैक्टोमीटर अधिक डूबता है और रीडिंग कम आती है।",
-            desc2: "आमतौर पर 3 प्रकार के लैक्टोमीटर का उपयोग किया जाता है, जो अलग-अलग तापमान पर अंशांकित होते हैं:",
-            types: ["<strong>क्यूवेन का लैक्टोमीटर:</strong> 15.5°C पर अंशांकित।", "<strong>बीआईएस लैक्टोमीटर:</strong> 27°C पर अंशांकित।", "<strong>जील लैक्टोमीटर:</strong> 29.4°C पर अंशांकित।"],
-            desc3: "एक मानक बीआईएस लैक्टोमीटर में 1.020 से 1.035 तक की विशिष्ट गुरुत्व सीमा होती है, जिसे पैमाने पर 20 से 35 के रूप में दर्शाया जाता है।"
+            title: "Siddhant",
+            desc1: "Lactometer <strong>Archimedes के siddhant</strong> par kaam karte hain: jab koi vastu kisi taral mein duboyi jaati hai, toh us par upar ki ore ek bal lagta hai jo us vastu dwara hataye gaye taral ke bhaar ke barabar hota hai. Lactometer taral ke specific gravity ko maapta hai. Doodh jitna gaadha hoga (adhik SNF), lactometer utna hi kam doobega aur reading adhik aayegi. Paani milane par doodh patla ho jaata hai, jisse lactometer adhik doobta hai aur reading kam aati hai.",
+            desc2: "Aam taur par 3 prakaar ke lactometer ka upyog kiya jaata hai, jo alag-alag taapman par calibrated hote hain:",
+            types: ["<strong>Quevenne’s Lactometer:</strong> 15.5°C par calibrated.", "<strong>BIS Lactometer:</strong> 27°C par calibrated.", "<strong>Zeal Lactometer:</strong> 29.4°C par calibrated."],
+            desc3: "Ek standard BIS lactometer mein 1.020 se 1.035 tak ki specific gravity seema hoti hai, jise scale par 20 se 35 ke roop mein darshaya jaata hai."
         },
         methods: {
-            title: "अंशांकन के विभिन्न तरीके",
+            title: "Calibration के विभिन्न तरीके",
             comparison: {
-                title: "1. तुलना विधि",
-                desc: "यह सबसे आसान तरीका है। इसमें एक ही दूध के नमूने में दो लैक्टोमीटर (एक नया और एक पहले से अंशांकित मानक लैक्टोमीटर) एक साथ डुबोए जाते हैं। यदि दोनों की रीडिंग समान आती है, तो नए लैक्टोमीटर को सही मान लिया जाता है।"
+                title: "1. Comparison Method",
+                desc: "Yeh sabse aasan tareeka hai. Ismein ek hi doodh ke namoone mein do lactometer (ek naya aur ek pehle se calibrated standard lactometer) ek saath duboye jaate hain. Yadi dono ki reading samaan aati hai, toh naye lactometer ko sahi maan liya jaata hai."
             },
             bis: {
-                title: "2. बीआईएस विधि (मानक घोल विधि)",
-                desc: "यह एक सटीक तरीका है जिसमें ज्ञात विशिष्ट गुरुत्व वाले घोलों का उपयोग किया जाता है। आमतौर पर, निर्जल सोडियम कार्बोनेट या सोडियम क्लोराइड के घोल बनाए जाते हैं।",
+                title: "2. BIS Method (Standard Solution Method)",
+                desc: "Yeh ek sateek tareeka hai jismein jyat specific gravity wale solutions ka upyog kiya jaata hai. Aam taur par, anhydrous sodium carbonate ya sodium chloride ke solutions banaye jaate hain.",
                 steps: [
-                    "तालिका के अनुसार, अलग-अलग विशिष्ट गुरुत्व (जैसे 1.025, 1.030) के लिए निर्धारित मात्रा में निर्जल सोडियम कार्बोनेट को आसुत जल में घोलें।",
-                    "इस घोल का सतही तनाव दूध के बराबर लाने के लिए थोड़ा एथिल अल्कोहल मिलाएं।",
-                    "घोल को एक लैक्टोमीटर जार में डालें और तापमान को लैक्टोमीटर के अंशांकन तापमान (जैसे बीआईएस के लिए 27°C) पर लाएं।",
-                    "लैक्टोमीटर को धीरे से घोल में डुबोएं और स्थिर होने दें।",
-                    "रीडिंग नोट करें। आपकी रीडिंग मानक घोल के विशिष्ट गुरुत्व से मेल खानी चाहिए। बीआईएस के अनुसार, 0.0005 से अधिक का अंतर नहीं होना चाहिए।"
+                    "Table ke anusaar, alag-alag specific gravity (jaise 1.025, 1.030) ke liye nirdharit matra mein anhydrous sodium carbonate ko distilled water mein gholein.",
+                    "Is solution ka surface tension doodh ke barabar laane ke liye thoda ethyl alcohol milayein.",
+                    "Solution ko ek lactometer jar mein daalein aur taapman ko lactometer ke calibration taapman (jaise BIS ke liye 27°C) par laayein.",
+                    "Lactometer ko dheere se solution mein duboye aur sthir hone dein.",
+                    "Reading note karein. Aapki reading standard solution ke specific gravity se mel khani chahiye. BIS ke anusaar, 0.0005 se adhik ka antar nahi hona chahiye."
                 ]
             }
         }
     },
     other_glassware: {
-        title: "अन्य कांच के बने पदार्थों का अंशांकन",
-        intro: "वॉल्यूमेट्रिक फ्लास्क, मापने वाले सिलेंडर और बीकर जैसे कांच के बने पदार्थों को अंशांकित करना उतना ही महत्वपूर्ण है जितना कि पिपेट और ब्यूटिरोमीटर को। इनका अंशांकन भी ग्रेविमेट्रिक विधि (वजन मापकर) से किया जाता है।",
+        title: "अन्य Glassware का Calibration",
+        intro: "Volumetric flasks, measuring cylinders, और beakers jaise glassware ko calibrate karna utna hi mahatvapurna hai jitna ki pipettes aur butyrometers ko. Inka calibration bhi gravimetric method (vajan maapkar) se kiya jaata hai.",
         principle: {
-            title: "सिद्धांत",
-            desc: "इस विधि का सिद्धांत बहुत सरल है: हम कांच के बने पदार्थ में आने वाले आसुत जल के वजन (द्रव्यमान) को एक निश्चित तापमान पर तौलकर उसके आयतन का पता लगाते हैं, क्योंकि हर तापमान पर पानी का घनत्व ज्ञात होता है (<code>आयतन = द्रव्यमान / घनत्व</code>)। इस निकाले गए आयतन की तुलना कांच के बने पदार्थ पर लिखी हुई क्षमता से की जाती है।"
+            title: "Siddhant",
+            desc: "Is vidhi ka siddhant bahut saral hai: hum glassware mein aane wale distilled water ke vajan (mass) ko ek nishchit taapman par tolkar uske volume ka pata lagaate hain, kyunki har taapman par paani ka density jyat hota hai (<code>Volume = Mass / Density</code>). Is nikale gaye volume ki tulna glassware par likhi hui kshamata se ki jaati hai."
         },
         procedure: {
-            title: "वॉल्यूमेट्रिक फ्लास्क/मापने वाले सिलेंडर/बीकर की अंशांकन विधि",
+            title: "Volumetric Flask/Measuring Cylinder/Beaker की Calibration विधि",
             steps: [
-                "एक साफ और पूरी तरह से सूखे वॉल्यूमेट्रिक फ्लास्क (या सिलेंडर/बीकर) को एक सटीक वजन संतुलन पर तौलें। इस वजन को <strong>W1</strong> के रूप में नोट करें।",
-                "अब, उस फ्लास्क में निश्चित तापमान (आमतौर पर 27°C) वाला आसुत जल उसके स्नातक चिह्न तक धीरे-धीरे भरें। मेनिस्कस का निचला हिस्सा निशान पर होना चाहिए।",
-                "पानी से भरे फ्लास्क को दोबारा तौलें। इस वजन को <strong>W2</strong> के रूप में नोट करें।",
-                "पानी का वजन (द्रव्यमान) निकालें: <strong>पानी का द्रव्यमान = W2 - W1</strong>।",
-                "अब इस वजन से पानी का आयतन गणना करें: <strong>आयतन (मिलीलीटर) = पानी का द्रव्यमान (ग्राम) / 27°C पर पानी का घनत्व (0.99654 ग्राम/मिलीलीटर)</strong>।",
-                "गणना किए गए आयतन की तुलना फ्लास्क पर लिखी हुई क्षमता (जैसे 100 मिलीलीटर, 250 मिलीलीटर) से करें।",
-                "हर कांच के बने पदार्थ की एक सहनशीलता सीमा होती है (कक्षा ए के लिए कम, कक्षा बी के लिए अधिक)। यदि गणना किया गया आयतन इस सीमा के भीतर है, तो कांच का बना पदार्थ सही है, अन्यथा उसे अस्वीकार कर दिया जाता है।"
+                "Ek saaf aur poori tarah se sukhe volumetric flask (ya cylinder/beaker) ko ek sateek weighing balance par tolein. Is vajan ko <strong>W1</strong> ke roop mein note karein.",
+                "Ab, us flask mein nishchit taapman (aam taur par 27°C) wala distilled water uske graduation nishaan tak dheere-dheere bharein. Meniscus ka nichla hissa nishaan par hona chahiye.",
+                "Paani se bhare flask ko dobara tolein. Is vajan ko <strong>W2</strong> ke roop mein note karein.",
+                "Paani ka vajan (mass) nikalein: <strong>Mass of Water = W2 - W1</strong>.",
+                "Ab is vajan se paani ka volume ganana karein: <strong>Volume (ml) = Mass of Water (g) / 27°C par paani ka density (0.99654 g/ml)</strong>.",
+                "Ganana kiye gaye volume ki tulna flask par likhi hui kshamata (jaise 100 ml, 250 ml) se karein.",
+                "Har glassware ki ek tolerance seema hoti hai (Class A ke liye kam, Class B ke liye adhik). Yadi ganana kiya gaya volume is seema ke bheetar hai, toh glassware sahi hai, anyatha use asweekar kar diya jaata hai."
             ]
         }
     },
     thermometer: {
-        title: "थर्मामीटर का अंशांकन",
-        intro: "थर्मामीटर को दो निश्चित बिंदुओं पर अंशांकित किया जाता है, जिससे उनकी सटीकता सुनिश्चित हो सके:",
+        title: "Thermometer का Calibration",
+        intro: "Thermometer ko do nishchit binduon par calibrate kiya jaata hai, jisse unki sateekta sunishchit ho sake:",
         ice_point: {
-            title: "1. बर्फ बिंदु (0°C)",
+            title: "1. Ice Point (0°C)",
             steps: [
-                "एक बीकर में शुद्ध, कुचली हुई बर्फ भरें।",
-                "उसमें थोड़ा ठंडा, आसुत जल डालें ताकि बर्फ पूरी तरह गीली हो जाए, लेकिन तैरे नहीं।",
-                "इस बर्फ-पानी के मिश्रण को अच्छी तरह मिलाएं।",
-                "जिस थर्मामीटर को अंशांकित करना है, उसे इस मिश्रण में डालें। ध्यान रहे कि थर्मामीटर का बल्ब बीकर के नीचे या किनारों से न टकराए।",
-                "थर्मामीटर को स्थिर होने तक प्रतीक्षा करें (लगभग 3-4 मिनट)।",
-                "रीडिंग नोट करें। एक सही अंशांकित थर्मामीटर पर यह <strong>0°C</strong> दिखाना चाहिए। यदि कोई अंतर है, तो उसे त्रुटि के रूप में नोट कर लें।"
+                "Ek beaker mein shuddh, kuchli hui barf bharein.",
+                "Usmein thoda thanda, distilled water daalein taaki barf poori tarah geeli ho jaaye, lekin taire nahi.",
+                "Is barf-paani ke mishran ko acchi tarah milayein.",
+                "Jis thermometer ko calibrate karna hai, use is mishran mein daalein. Dhyan rahe ki thermometer ka bulb beaker ke neeche ya kinaron se na takraye.",
+                "Thermometer ko sthir hone tak prateeksha karein (lagbhag 3-4 minute).",
+                "Reading note karein. Ek sahi calibrated thermometer par yeh <strong>0°C</strong> dikhana chahiye. Yadi koi antar hai, toh use truti ke roop mein note kar lein."
             ]
         },
         boiling_point: {
-            title: "2. क्वथनांक (100°C)",
+            title: "2. Boiling Point (100°C)",
             steps: [
-                "एक फ्लास्क में आसुत जल लें और उसे उबालना शुरू करें।",
-                "थर्मामीटर को फ्लास्क में इस तरह रखें कि उसका बल्ब उबलते पानी के ठीक ऊपर, भाप में रहे, पानी को न छुए।",
-                "जब थर्मामीटर की रीडिंग स्थिर हो जाए, तो उसे नोट करें।",
-                "मानक वायुमंडलीय दबाव (760 मिमी Hg) पर, पानी <strong>100°C</strong> पर उबलता है। यदि दबाव अलग है, तो सुधार की आवश्यकता हो सकती है।",
-                "यदि रीडिंग 100°C से अलग है, तो उस अंतर को त्रुटि के रूप में नोट करें।"
+                "Ek flask mein distilled water lein aur use ubaalna shuru karein.",
+                "Thermometer ko flask mein is tarah rakhein ki uska bulb ubalte paani ke theek upar, bhaap mein rahe, paani ko na chue.",
+                "Jab thermometer ki reading sthir ho jaaye, toh use note karein.",
+                "Standard vayumandaliya dabav (760 mm Hg) par, paani <strong>100°C</strong> par ubalta hai. Yadi dabav alag hai, toh sudhar ki avashyakta ho sakti hai.",
+                "Yadi reading 100°C se alag hai, toh us antar ko truti ke roop mein note karein."
             ]
         }
     },
     balance: {
-        title: "वजन संतुलन का अंशांकन",
-        intro: "वजन संतुलन को मानक, प्रमाणित वजनों का उपयोग करके अंशांकित किया जाता है। इसके लिए तीन मुख्य परीक्षण किए जाते हैं:",
+        title: "Weighing Balance का Calibration",
+        intro: "Weighing balance ko standard, pramanit vajanon ka upyog karke calibrate kiya jaata hai. Iske liye teen mukhya test kiye jaate hain:",
         tests: [
-            "<strong>उत्केंद्रता परीक्षण:</strong> इसमें मानक वजन को वजन पैन के अलग-अलग कोनों पर रखकर देखा जाता है कि रीडिंग बदल तो नहीं रही है।",
-            "<strong>पुनरावृत्ति परीक्षण:</strong> इसमें एक ही वजन को बार-बार रखकर जांचा जाता है कि संतुलन हर बार समान रीडिंग दे रहा है या नहीं।",
-            "<strong>रैखिकता परीक्षण:</strong> इसमें संतुलन की पूरी मापने की सीमा (जैसे, 0 ग्राम से 200 ग्राम) में अलग-अलग मानक वजन (जैसे, 20 ग्राम, 50 ग्राम, 100 ग्राम, 150 ग्राम) रखकर सटीकता जांची जाती है।"
+            "<strong>Eccentricity Test:</strong> Ismein standard vajan ko weighing pan ke alag-alag konon par rakhkar dekha jaata hai ki reading badal toh nahi rahi hai.",
+            "<strong>Repeatability Test:</strong> Ismein ek hi vajan ko baar-baar rakhkar jaancha jaata hai ki balance har baar samaan reading de raha hai ya nahi.",
+            "<strong>Linearity Test:</strong> Ismein balance ki poori maapne ki seema (jaise, 0g se 200g) mein alag-alag standard vajan (jaise, 20g, 50g, 100g, 150g) rakhkar sateekta jaanchi jaati hai."
         ]
     }
 },
@@ -199,7 +199,7 @@ en: {
     description: "A guide to ensuring accurate measurements in the dairy laboratory.",
     backToTopics: "Back to Topics",
     intro_p1: "<strong>Calibration</strong> means comparing a measuring instrument to a standard instrument whose measurement is already considered accurate. This determines how accurate our instrument is. It does not involve adjustment but may indicate the need for adjustment.",
-    intro_p2: "In a dairy plant, the composition (fat, SNF, etc.) and quality of milk are analyzed multiple times from reception to dispatch. This is essential for doğru pricing of the product, its suitability for processing, and meeting legal standards. Therefore, calibration and standardization of glassware (butyrometers, pipettes, etc.) and chemicals used in analysis are very important before use to avoid incorrect results.",
+    intro_p2: "In a dairy plant, the composition (fat, SNF, etc.) and quality of milk are analyzed multiple times from reception to dispatch. This is essential for correct pricing of the product, its suitability for processing, and meeting legal standards. Therefore, calibration and standardization of glassware (butyrometers, pipettes, etc.) and chemicals used in analysis are very important before use to avoid incorrect results.",
     tabs: {
         definitions: "Key Definitions",
         pipette: "Pipette Calibration",
@@ -389,3 +389,5 @@ en: {
     }
 }
 }
+
+    
