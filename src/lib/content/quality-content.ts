@@ -1,219 +1,219 @@
 
 export const qualityContent = {
   hi: {
-    title: "गुणवत्ता अवधारणाएं",
-    description: "डेयरी उद्योग में गुणवत्ता सुनिश्चित करने के लिए एक गाइड।",
+    title: "Quality ki Avdharna",
+    description: "Dairy Industry mein quality sunishchit karne ke liye ek guide.",
     tabs: {
-        intro: "परिचय",
-        concepts: "अवधारणाएं",
+        intro: "Introduction",
+        concepts: "Concepts",
         prps: "PRPs",
-        philosophy: "दर्शन",
+        philosophy: "Philosophies",
         tqm: "TQM",
         haccp: "HACCP",
         iso: "ISO",
-        bodies: "नियामक निकाय"
+        bodies: "Regulatory Bodies"
     },
-    intro1: "खाद्य उद्योग के उदारीकरण के बाद, खाद्य सुरक्षा अवधारणाओं का महत्व बहुत बढ़ गया है। आज, बनाए जा रहे खाद्य उत्पादों की गुणवत्ता सबसे महत्वपूर्ण है। खाद्य आपूर्ति श्रृंखलाओं के एकीकरण के लिए अब खाद्य सुरक्षा सुनिश्चित करने के नए तरीके चाहिए। डेयरी उद्योग भी अब इन तरीकों को अपना रहा है ताकि दूध और दूध से बने उत्पादों की सुरक्षा बनी रहे। खाद्य नियामक निकायों ने भी दूध और दूध से बने उत्पादों के लिए सख्त कानून और मानक बनाए हैं। अब खाद्य सुरक्षा सिर्फ निर्यात होने वाले उत्पादों तक ही सीमित नहीं है, बल्कि घरेलू बाजार और उपभोक्ताओं के लिए भी जरूरी है। इसलिए, सार्वजनिक और निजी क्षेत्र दोनों ने अपने उत्पादन प्रक्रिया को नई प्रौद्योगिकियों के साथ बदला है और उत्पाद सुरक्षा के लिए सख्त कानून लागू किए हैं।",
-    intro2: "एक उत्पाद की सुरक्षा और गुणवत्ता पूरी श्रृंखला में, यानी पशु के थन (udder) से लेकर उपभोक्ता तक या 'खेत से कांटे तक', सुनिश्चित की जानी चाहिए। दूध एक जल्दी खराब होने वाली चीज है और इसमें पर्यावरणीय कारकों या खराब कृषि प्रथाओं की वजह से संदूषण का खतरा ज्यादा होता है। इसलिए दूध उत्पादकों और उद्योग के लोगों को इसकी सुरक्षा और गुणवत्ता बनाए रखने के लिए बहुत सावधान रहना पड़ता है, खासकर जहां बुनियादी ढांचा ठीक न हो।",
-    intro3: "डेयरी उद्योग के लिए गुणवत्ता आश्वासन और कुछ गुणवत्ता अवधारणाओं को अपनाने से निम्नलिखित फायदे होंगे:",
+    intro1: "Food industry ke liberalization ke baad, food safety concepts ka mahatva bahut badh gaya hai. Aaj, banaye ja rahe food products ki quality sabse important hai. Food supply chains ke integration ke liye ab food safety sunishchit karne ke naye tarike chahiye. Dairy industry bhi ab in tarikon ko apna raha hai taaki milk aur milk products ki safety bani rahe. Food regulatory bodies ne bhi milk aur milk products ke liye sakht kanoon aur standards banaye hain. Ab food safety sirf export hone wale products tak hi seemit nahi hai, balki domestic market aur consumers ke liye bhi zaroori hai. Isliye, public aur private sector dono ne apne production process ko nayi technologies ke saath badla hai aur product safety ke liye sakht kanoon laagoo kiye hain.",
+    intro2: "Ek product ki safety aur quality poori chain mein, yaani pashu ke than (udder) se lekar consumer tak ya 'farm to fork', sunishchit ki jaani chahiye. Doodh ek jaldi kharab hone wali cheez hai aur ismein environmental factors ya kharab agricultural practices ki vajah se contamination ka khatra zyada hota hai. Isliye doodh utpadakon aur industry ke logon ko iski safety aur quality banaye rakhne ke liye bahut savdhan rehna padta hai, khas karke jahan infrastructure theek na ho.",
+    intro3: "Dairy industry ke liye quality assurance aur kuch quality concepts ko apnane se nimnalikhit fayde honge:",
     introBenefits: [
-      "मिलावट की समस्या पर रोक लगेगी, जिसका असर दूध और दूध से बने उत्पादों की गुणवत्ता पर दिखेगा।",
-      "घरेलू और अंतरराष्ट्रीय उपभोक्ताओं का दूध और दूध से बने उत्पादों की गुणवत्ता पर विश्वास बढ़ेगा।",
-      "डेयरी उद्योग को ज्यादा राजस्व मिलेगा, जिससे कर्मचारियों और किसानों को फायदा होगा।"
+      "Milawat ki samasya par rok lagegi, jiska asar doodh aur doodh se bane utpadon ki quality par dikhega.",
+      "Gharelu aur antarrashtriya upbhoktaon ka doodh aur doodh se bane utpadon ki quality par vishwas badhega.",
+      "Dairy udyog ko zyada rajasva milega, jisse karmchariyon aur kisanon ko fayda hoga."
     ],
     whatIsQuality: {
-      title: "गुणवत्ता क्या है?",
-      p1: "ISO 9001:2005 के अनुसार, गुणवत्ता वह डिग्री है जिससे किसी वस्तु की अंतर्निहित विशेषताएं आवश्यकताओं को पूरा करती हैं। यह किसी उत्पाद या सेवा की सभी विशेषताओं और गुणों का योग है जो उसकी बताई गई या निहित आवश्यकताओं को पूरा करने की क्षमता पर निर्भर करता है।",
-      variability: "विविधता",
-      p2: "गुणवत्ता का विविधता (variability) के साथ उल्टा संबंध है। जैसे-जैसे किसी उत्पाद या सेवा की विशेषताओं में विविधता कम होती है, उत्पाद या सेवा की गुणवत्ता बढ़ जाती है।",
-      p3: "गुणवत्ता कई विशेषताओं को शामिल करती है: भौतिक, रासायनिक, तकनीकी, बैक्टीरियोलॉजिकल, पोषण संबंधी, सौंदर्य (दिखावट)।",
-      p4: "एक उपभोक्ता मुख्य रूप से किसी उत्पाद या सेवा के विनिर्देशों पर ध्यान देता है और अलग-अलग निर्माताओं से मिलने वाले उसी उत्पाद की तुलना करता है।"
+      title: "Quality Kya Hai?",
+      p1: "ISO 9001:2005 ke anusar, quality woh degree hai jisse kisi vastu ki anivarya visheshtayein avashyaktaon ko poora karti hain. Yeh kisi utpad ya seva ki sabhi visheshtaon aur gunon ka yog hai jo uski batai gayi ya nihit avashyaktaon ko poora karne ki kshamata par nirbhar karta hai.",
+      variability: "Variability",
+      p2: "Quality ka variability ke saath ulta sambandh hai. Jaise-jaise kisi utpad ya seva ki visheshtaon mein vividhta kam hoti hai, utpad ya seva ki quality badh jaati hai.",
+      p3: "Quality kai visheshtaon ko shamil karti hai: Physical, Chemical, Technological, Bacteriological, Nutritional, Aesthetic (dikhavat).",
+      p4: "Ek consumer mukhya roop se kisi utpad ya seva ke specifications par dhyan deta hai aur alag-alag nirmaataon se milne wale usi utpad ki tulna karta hai."
     },
     qc: {
-      title: "गुणवत्ता नियंत्रण (QC) क्या है?",
-      p1: "यह उन गतिविधियों का सेट है जो यह सुनिश्चित करती हैं कि उत्पाद और सेवाएं गुणवत्ता की आवश्यकताओं को पूरा करते हैं। इसे एक प्रयोगशाला कार्य के रूप में देखा जाता था जिसका उद्देश्य नमूनों का विश्लेषण करके तैयार माल (finished goods) की अंतिम-बिंदु परीक्षण करना और उन्हें स्वीकार या अस्वीकार करने का निर्णय लेना था।",
-      p2: "गुणवत्ता नियंत्रण एक विफलता का पता लगाने वाली प्रणाली है जो नियमित अंतराल पर एक निर्धारित लॉट से यादृच्छिक नमूने लेकर उत्पादों में दोष और त्रुटियों की पहचान करने के लिए परीक्षण तकनीक का उपयोग करती है। यह पता लगाने पर ध्यान केंद्रित करता है, रोकथाम पर नहीं।",
+      title: "Quality Control (QC) Kya Hai?",
+      p1: "Yeh un gatividhiyon ka set hai jo yeh sunishchit karti hain ki utpad aur sevaein quality ki avashyaktaon ko poora karte hain. Ise ek laboratory karya ke roop mein dekha jaata tha jiska uddeshya namoono ka vishleshan karke taiyar maal (finished goods) ki antim-bindu parikshan karna aur unhein sweekar ya asweekar karne ka nirnay lena tha.",
+      p2: "Quality control ek vifalta ka pata lagane wali pranali hai jo niyamit antralon par ek nirdharit lot se yaadruchhik namoone lekar utpadon mein dosh aur trutiyon ki pehchan karne ke liye parikshan takneek ka upyog karti hai. Yeh pata lagane par dhyan kendrit karta hai, roktham par nahi.",
       responsibilities: {
-        title: "गुणवत्ता नियंत्रण विभाग की जिम्मेदारियां",
+        title: "Quality Control Vibhag ki Jimmedariyan",
         list: [
-          "कच्चे माल, योजकों, पैकेजिंग सामग्री जैसी आपूर्तियों का निरीक्षण करना।",
-          "उत्पादन संचालन का निर्धारण और सत्यापन।",
-          "उत्पादन और उपकरण की दक्षता (क्षमता) का मापन।",
-          "तैयार उत्पाद का रासायनिक, माइक्रोबियल, और संवेदी विश्लेषण करना।",
-          "भंडारण और शिपिंग को नियंत्रित करना।",
-          "मानक संचालन प्रक्रियाएं (SOPs) और विनिर्देश तैयार करना।",
-          "सफाई (स्वच्छता) का निरीक्षण।",
-          "कानूनी नियमों का पालन सुनिश्चित करना।",
-          "अपशिष्ट निपटान (कचरा प्रबंधन) को नियंत्रित करना।"
+          "Kachche maal, additives, packaging samagri jaisi aapurtiyon ka nirikshan karna.",
+          "Utpadan sanchalan ka nirdharan aur satyapan.",
+          "Utpadan aur upkaran ki dakshata (kshamata) ka maapan.",
+          "Taiyar utpad ka chemical, microbial, aur samvedi vishleshan karna.",
+          "Bhandaran aur shipping ko niyantrit karna.",
+          "Maanak sanchalan prakriyaen (SOPs) aur vinirdesh taiyar karna.",
+          "Safai (swachhata) ka nirikshan.",
+          "Kanuni niyamon ka palan sunishchit karna.",
+          "Apshisht niptan (kachra prabandhan) ko niyantrit karna."
         ]
       }
     },
     qa: {
-      title: "गुणवत्ता आश्वासन (QA) क्या है?",
-      p1: "यह उन गतिविधियों का सेट है जो यह सुनिश्चित करती हैं कि उत्पादों और सेवाओं के गुणवत्ता स्तर ठीक से बनाए रखे जाते हैं और आपूर्तिकर्ता और ग्राहक गुणवत्ता के मुद्दे ठीक से हल किए जाते हैं। गुणवत्ता आश्वासन गलती और दोष होने से रोकने की एक विधि है।",
-      p2: "ISO, गुणवत्ता आश्वासन को 'गुणवत्ता प्रबंधन का वह हिस्सा जो यह विश्वास दिलाने पर केंद्रित है कि गुणवत्ता की आवश्यकताएं पूरी होंगी' के रूप में परिभाषित करता है। यह एक सक्रिय दृष्टिकोण है, प्रतिक्रियात्मक नहीं। उत्पाद को हर कदम पर निगरानी की जाती है।",
+      title: "Quality Assurance (QA) Kya Hai?",
+      p1: "Yeh un gatividhiyon ka set hai jo yeh sunishchit karti hain ki utpadon aur sevaon ke quality star theek se banaye rakhe jaate hain aur aapoortikarta aur graahak quality ke mudde theek se hal kiye jaate hain. Quality assurance galti aur dosh hone se rokne ki ek vidhi hai.",
+      p2: "ISO, quality assurance ko 'quality prabandhan ka vah hissa jo yah vishwas dilane par kendrit hai ki quality ki avashyaktaen poori hongi' ke roop mein paribhashit karta hai. Yeh ek sakriya drishtikon hai, pratikriyatmak nahi. Utpad ko har kadam par nigrani ki jaati hai.",
       table: {
-        caption: "तालिका 9.1: गुणवत्ता नियंत्रण बनाम गुणवत्ता आश्वासन",
-        header1: "गुणवत्ता नियंत्रण",
-        header2: "गुणवत्ता आश्वासन",
+        caption: "Table 9.1: Quality Control vs Quality Assurance",
+        header1: "Quality Control",
+        header2: "Quality Assurance",
         rows: [
-          { qc: "उत्पाद पर केंद्रित", qa: "प्रक्रिया पर केंद्रित" },
-          { qc: "प्रतिक्रियात्मक दृष्टिकोण", qa: "सक्रिय दृष्टिकोण" },
-          { qc: "सुधारात्मक कार्रवाई", qa: "निवारक कार्रवाई" },
-          { qc: "गुणवत्ता परीक्षण पर ध्यान केंद्रित", qa: "गुणवत्ता निर्माण पर ध्यान केंद्रित" },
-          { qc: "दोषों का पता लगाना", qa: "दोषों को रोकना" }
+          { qc: "Product par kendrit", qa: "Process par kendrit" },
+          { qc: "Pratikriyatmak drishtikon", qa: "Sakriya drishtikon" },
+          { qc: "Sudharatmak karravai", qa: "Nivarak karravai" },
+          { qc: "Quality parikshan par dhyan kendrit", qa: "Quality nirman par dhyan kendrit" },
+          { qc: "Doshon ka pata lagana", qa: "Doshon ko rokna" }
         ]
       }
     },
     deming: {
-      title: "डेमिंग का दर्शन",
-      p1: "विलियम एडवर्ड्स डेमिंग एक अमेरिकी प्रोफेसर, सांख्यिकीविद् और प्रबंधन सलाहकार थे। उन्होंने जापान में प्रक्रिया नियंत्रण सिखाया और यह संदेश दिया कि 'गुणवत्ता में सुधार करके, कंपनियां अपने खर्च कम कर सकती हैं और उत्पादकता और बाजार हिस्सेदारी बढ़ा सकती हैं।' उनके विचारों ने टोयोटा और सोनी जैसी कंपनियों को सफल होने में मदद की।",
+      title: "Deming ka Darshan",
+      p1: "William Edwards Deming ek American professor, sankhyikivid, aur prabandhan salahkar the. Unhone Japan mein process control sikhaya aur yeh sandesh diya ki 'quality mein sudhar karke, companiyan apne kharch kam kar sakti hain aur utpadakta aur bazaar hissedari badha sakti hain.' Unke vicharon ne Toyota aur Sony jaisi companiyon ko safal hone mein madad ki.",
       cycle: {
-        title: "डेमिंग चक्र (PDCA चक्र)",
-        p1: "डेमिंग ने एक चक्र प्रस्तावित किया जिसे अक्सर PDCA चक्र कहते हैं। PDCA एक चार-चरण वाली प्रबंधन तकनीक है, जिसका अर्थ है प्लान-डू-चेक-एक्ट। यह अवधारणा प्रक्रिया की निगरानी और हर कदम पर असफलता के मूल कारण को समाप्त करने पर केंद्रित है।",
-        plan: { title: "योजना बनाएं (Plan)", description: "कंपनी के लक्ष्य स्थापित करें। उन लक्ष्यों को प्राप्त करने के लिए रणनीति बनाएं।" },
-        do: { title: "करें (Do)", description: "योजना के अनुसार काम करें। सही कच्चे माल, योजकों और पैकेजिंग सामग्री का उपयोग करें।" },
-        check: { title: "जांचें (Check)", description: "नियमित रूप से जांचें कि सभी प्रोटोकॉल योजना के अनुसार हो रहे हैं या नहीं। किसी भी विचलन को ठीक करें।" },
-        act: { title: "कार्रवाई करें (Act)", description: "जब कोई गैर-अनुपालन पाया जाए, तो उसके मूल कारण को पहचानें और उसे दूर करने के लिए योजना बनाएं।" }
+        title: "Deming Cycle (PDCA Cycle)",
+        p1: "Deming ne ek chakra prastavit kiya jise aksar PDCA chakra kehte hain. PDCA ek char-charan wali prabandhan takneek hai, jiska arth hai Plan-Do-Check-Act. Yeh avdharna prakriya ki nigrani aur har kadam par asafalta ke mool karan ko samapt karne par kendrit hai.",
+        plan: { title: "Plan (Yojana)", description: "Company ke lakshya sthapit karein. Un lakshyon ko prapt karne ke liye ranneeti banayein." },
+        do: { title: "Do (Karein)", description: "Yojana ke anusar kaam karein. Sahi kachche maal, additives, aur packaging samagri ka upyog karein." },
+        check: { title: "Check (Jaanch)", description: "Niyamit roop se jaanchein ki sabhi protocol yojana ke anusar ho rahe hain ya nahi. Kisi bhi vichalan ko theek karein." },
+        act: { title: "Act (Karyavahi)", description: "Jab koi gair-anupalan paya jaaye, to uske mool karan ko pehchanein aur use door karne ke liye yojana banayein." }
       }
     },
     juran: {
-      title: "जुरान का दर्शन",
-      p1: "जोसेफ जुरान एक अमेरिकी इंजीनियर और प्रबंधन सलाहकार थे। उन्होंने गुणवत्ता प्राप्त करने के लिए एक व्यापक संगठनात्मक स्तर के दृष्टिकोण के महत्व पर जोर दिया। उन्होंने कहा कि गुणवत्ता प्रबंधन शीर्ष प्रबंधन से शुरू होकर नीचे तक जाता है।",
+      title: "Juran ka Darshan",
+      p1: "Joseph Juran ek American engineer aur prabandhan salahkar the. Unhone quality prapt karne ke liye ek vyapak sangathanik star ke drishtikon ke mahatva par jor diya. Unhone kaha ki quality prabandhan sheersh prabandhan se shuru hokar neeche tak jaata hai.",
       trilogy: {
-        title: "जुरान ट्रिलॉजी",
-        p1: "जुरान ने गुणवत्ता के लिए एक दृष्टिकोण दिया जिसे जुरान ट्रिलॉजी कहा जाता है। इस गुणवत्ता अवधारणा में शामिल हैं:",
+        title: "Juran Trilogy",
+        p1: "Juran ne quality ke liye ek drishtikon diya jise Juran Trilogy kaha jaata hai. Is quality avdharna mein shamil hain:",
         list: [
-          { title: "गुणवत्ता योजना (Quality Planning)", description: "उत्पाद और प्रक्रिया डिजाइन करना जो ग्राहक की जरूरतों को पूरा करें।" },
-          { title: "गुणवत्ता नियंत्रण (Quality Control)", description: "प्रक्रिया की निगरानी करना और प्रदर्शन को मानकों के साथ तुलना करके उसे ठीक करना।" },
-          { title: "गुणवत्ता सुधार (Quality Improvement)", description: "लगातार बेहतर प्रदर्शन के स्तर तक पहुंचने के लिए परियोजनाएं बनाना।" }
+          { title: "Quality Planning", description: "Utpad aur prakriya design karna jo graahak ki zarooraton ko poora karein." },
+          { title: "Quality Control", description: "Prakriya ki nigrani karna aur pradarshan ko manakon ke saath tulna karke use theek karna." },
+          { title: "Quality Improvement", description: "Lagatar behtar pradarshan ke star tak pahunchne ke liye pariyojnayein banana." }
         ]
       },
-      p2: "जुरान के अनुसार, गुणवत्ता के मुद्दे का मुख्य कारण बदलाव का विरोध और मानव संबंध की समस्याएं थीं।"
+      p2: "Juran ke anusar, quality ke mudde ka mukhya karan badlav ka virodh aur manav sambandh ki samasyayein thi."
     },
     tqm: {
-      title: "कुल गुणवत्ता प्रबंधन (TQM)",
-      p1: "TQM एक प्रबंधन दर्शन है जिसका उद्देश्य ग्राहक संतुष्टि के माध्यम से दीर्घकालिक सफलता प्राप्त करना है। TQM में, एक संगठन के सभी सदस्य प्रक्रियाओं, उत्पादों, सेवाओं, और जिस संस्कृति में वे काम करते हैं, उसमें लगातार सुधार करने में भाग लेते हैं। यह QC और QA से आगे बढ़कर पूरे संगठन को गुणवत्ता के प्रति जिम्मेदार बनाता है।",
+      title: "Total Quality Management (TQM)",
+      p1: "TQM ek prabandhan darshan hai jiska uddeshya graahak santushti ke madhyam se deerghakalik safalta prapt karna hai. TQM mein, ek sangathan ke sabhi sadasya prakriyaon, utpadon, sevaon, aur jis sanskriti mein ve kaam karte hain, usmein lagatar sudhar karne mein bhag lete hain. Yeh QC aur QA se aage badhkar poore sangathan ko quality ke prati jimmedar banata hai.",
       principles: {
-        title: "TQM के मुख्य सिद्धांत",
+        title: "TQM ke Mukhya Siddhant",
         list: [
-          { title: "ग्राहक-केंद्रित (Customer-Focused)", description: "ग्राहक अंत में गुणवत्ता के स्तर को निर्धारित करता है। उनकी जरूरतों को समझना और पूरा करना TQM का मूल है।" },
-          { title: "कुल कर्मचारी भागीदारी (Total Employee Involvement)", description: "सभी कर्मचारी, प्रबंधन से लेकर दुकान के फर्श के श्रमिकों तक, एक सामान्य लक्ष्य के लिए काम करते हैं। हर कोई गुणवत्ता के लिए जिम्मेदार है।" },
-          { title: "प्रक्रिया-केंद्रित (Process-Centered)", description: "TQM प्रक्रिया सोच पर ध्यान केंद्रित करता है। एक प्रक्रिया कदमों की एक श्रृंखला है जो इनपुट को लेकर आउटपुट बनाती है। प्रक्रिया को परिभाषित करना और उसकी प्रदर्शन की निगरानी करना जरूरी है।" },
-          { title: "एकीकृत प्रणाली (Integrated System)", description: "एक संगठन में अलग-अलग विभागों को एक साथ मिलकर काम करना चाहिए। क्षैतिज प्रक्रियाएं जो विभागों को जोड़ती हैं, TQM के लिए महत्वपूर्ण हैं।" },
-          { title: "रणनीतिक और व्यवस्थित दृष्टिकोण (Strategic and Systematic Approach)", description: "गुणवत्ता को एक रणनीतिक प्रबंधन का अनिवार्य हिस्सा माना जाता है। एक रणनीतिक योजना बनाई जाती है जिसमें गुणवत्ता को मूल तत्व के रूप में शामिल किया जाता है।" },
-          { title: "निरंतर सुधार (Kaizen)", description: "TQM निरंतर सुधार पर जोर देता है। यह एक 'शून्य दोष' की ओर बढ़ने का प्रयास है।" },
-          { title: "तथ्य-आधारित निर्णय लेना (Fact-Based Decision Making)", description: "निर्णय डेटा और तथ्यों पर आधारित होने चाहिए, न कि अनुमानों पर। प्रदर्शन को ट्रैक करने के लिए डेटा का उपयोग किया जाता है।" },
-          { title: "संचार (Communications)", description: "प्रभावी संचार TQM का एक महत्वपूर्ण हिस्सा है, जो मनोबल बनाए रखता है और कर्मचारियों को प्रेरित करता है।" }
+          { title: "Customer-Focused", description: "Graahak ant mein quality ke star ko nirdharit karta hai. Unki zarooraton ko samajhna aur poora karna TQM ka mool hai." },
+          { title: "Total Employee Involvement", description: "Sabhi karmachari, prabandhan se lekar dukan ke farsh ke shramikon tak, ek samanya lakshya ke liye kaam karte hain. Har koi quality ke liye jimmedar hai." },
+          { title: "Process-Centered", description: "TQM prakriya soch par dhyan kendrit karta hai. Ek prakriya kadmon ki ek shrinkhala hai jo input ko lekar output banati hai. Prakriya ko paribhashit karna aur uski pradarshan ki nigrani karna zaroori hai." },
+          { title: "Integrated System", description: "Ek sangathan mein alag-alag vibhagon ko ek saath milkar kaam karna chahiye. Kshaiteej prakriyaen jo vibhagon ko jodti hain, TQM ke liye mahatvapurna hain." },
+          { title: "Strategic and Systematic Approach", description: "Quality ko ek ranneetik prabandhan ka anivarya hissa maana jaata hai. Ek ranneetik yojana banayi jaati hai jismein quality ko mool tatva ke roop mein shamil kiya jaata hai." },
+          { title: "Continuous Improvement (Kaizen)", description: "TQM lagatar sudhar par jor deta hai. Yeh ek 'shunya dosh' ki ore badhne ka prayas hai." },
+          { title: "Fact-Based Decision Making", description: "Nirnay data aur tathyon par aadharit hone chahiye, na ki anumanon par. Pradarshan ko track karne ke liye data ka upyog kiya jaata hai." },
+          { title: "Communications", description: "Prabhavi sanchar TQM ka ek mahatvapurna hissa hai, jo manobal banaye rakhta hai aur karmachariyon ko prerit karta hai." }
         ]
       }
     },
     iso: {
-      title: "ISO मानक",
-      p1: "ISO (अंतर्राष्ट्रीय मानकीकरण संगठन) एक विश्वव्यापी संगठन है जो विभिन्न उद्योगों के लिए मानक बनाता है। यह एक गैर-सरकारी संगठन है जो 160 से अधिक देशों के राष्ट्रीय मानक निकायों का नेटवर्क है। इसका मुख्य उद्देश्य उत्पादों, सेवाओं, और प्रणालियों के लिए स्वैच्छिक अंतरराष्ट्रीय मानक विकसित करना है, ताकि गुणवत्ता, सुरक्षा, और दक्षता सुनिश्चित हो सके।",
-      p2: "डेयरी उद्योग के लिए, ISO 9001 और ISO 22000 सबसे महत्वपूर्ण हैं।",
+      title: "ISO Standards",
+      p1: "ISO (International Organization for Standardization) ek vishvavyapi sangathan hai jo vibhinn udyogon ke liye maanak banata hai. Yeh ek gair-sarkari sangathan hai jo 160 se adhik deshon ke rashtriya maanak nikayon ka network hai. Iska mukhya uddeshya utpadon, sevaon, aur pranaliyon ke liye svaichhik antarrashtriya maanak viksit karna hai, taaki quality, suraksha, aur dakshata sunishchit ho sake.",
+      p2: "Dairy udyog ke liye, ISO 9001 aur ISO 22000 sabse mahatvapurna hain.",
       qms: {
-        title: "ISO 9001: गुणवत्ता प्रबंधन प्रणाली (QMS)",
-        p1: "ISO 9001 एक मानक है जो एक गुणवत्ता प्रबंधन प्रणाली (QMS) के लिए आवश्यकताओं को निर्धारित करता है। यह इस बात पर केंद्रित है कि एक संगठन लगातार ऐसे उत्पाद और सेवाएं प्रदान करे जो ग्राहक और नियामक आवश्यकताओं को पूरा करते हैं। यह उत्पाद की गुणवत्ता पर ध्यान केंद्रित करता है, न कि खाद्य सुरक्षा पर।",
-        elementsTitle: "मुख्य तत्व:",
+        title: "ISO 9001: Quality Management System (QMS)",
+        p1: "ISO 9001 ek maanak hai jo ek quality prabandhan pranali (QMS) ke liye avashyaktaon ko nirdharit karta hai. Yeh is baat par kendrit hai ki ek sangathan lagatar aise utpad aur sevaein pradan kare jo graahak aur niyamak avashyaktaon ko poora karte hain. Yeh utpad ki quality par dhyan kendrit karta hai, na ki food safety par.",
+        elementsTitle: "Mukhya Tatva:",
         list: [
-          { title: "ग्राहक फोकस (Customer Focus)", description: "ग्राहक की जरूरतों को समझना और उन्हें पूरा करने का प्रयास करना।" },
-          { title: "नेतृत्व (Leadership)", description: "शीर्ष प्रबंधन को गुणवत्ता के प्रति प्रतिबद्ध होना चाहिए और एक स्पष्ट दृष्टि प्रदान करनी चाहिए।" },
-          { title: "लोगों की भागीदारी (Engagement of People)", description: "सभी स्तरों के कर्मचारियों को गुणवत्ता सुधार में शामिल करना।" },
-          { title: "प्रक्रिया दृष्टिकोण (Process Approach)", description: "गतिविधियों को एक-दूसरे से जुड़े प्रक्रियाओं के रूप में समझना और प्रबंधित करना।" },
-          { title: "सुधार (Improvement)", description: "लगातार सुधार को एक स्थायी लक्ष्य बनाना।" },
-          { title: "साक्ष्य-आधारित निर्णय लेना (Evidence-based Decision Making)", description: "डेटा और सूचना के विश्लेषण पर आधारित निर्णय लेना।" },
-          { title: "संबंध प्रबंधन (Relationship Management)", description: "आपूर्तिकर्ताओं जैसे इच्छुक पार्टियों के साथ संबंधों को प्रबंधित करना।" }
+          { title: "Customer Focus", description: "Graahak ki zarooraton ko samajhna aur unhein poora karne ka prayas karna." },
+          { title: "Leadership", description: "Sheersh prabandhan ko quality ke prati pratibaddh hona chahiye aur ek spasht drishti pradan karni chahiye." },
+          { title: "Engagement of People", description: "Sabhi staron ke karmachariyon ko quality sudhar mein shamil karna." },
+          { title: "Process Approach", description: "Gatividhiyon ko ek-doosre se jude prakriyaon ke roop mein samajhna aur prabandhit karna." },
+          { title: "Improvement", description: "Lagatar sudhar ko ek sthayi lakshya banana." },
+          { title: "Evidence-based Decision Making", description: "Data aur soochana ke vishleshan par aadharit nirnay lena." },
+          { title: "Relationship Management", description: "Aapoortikartaon jaise ichchhuk pakshon ke saath sambandhon ko prabandhit karna." }
         ]
       },
       fsms: {
-        title: "ISO 22000: खाद्य सुरक्षा प्रबंधन प्रणाली (FSMS)",
-        p1: "ISO 22000 एक खाद्य-विशिष्ट मानक है जो एक खाद्य सुरक्षा प्रबंधन प्रणाली (FSMS) के लिए आवश्यकताओं को बताता है। यह ISO 9001 के प्रबंधन सिद्धांतों को HACCP के खाद्य सुरक्षा सिद्धांतों के साथ जोड़ता है। यह 'खेत से कांटे तक' खाद्य श्रृंखला के सभी संगठनों के लिए डिज़ाइन किया गया है।",
-        elementsTitle: "मुख्य तत्व:",
+        title: "ISO 22000: Food Safety Management System (FSMS)",
+        p1: "ISO 22000 ek food-specific maanak hai jo ek food safety prabandhan pranali (FSMS) ke liye avashyaktaon ko batata hai. Yeh ISO 9001 ke prabandhan siddhanton ko HACCP ke food safety siddhanton ke saath jodta hai. Yeh 'farm to fork' food chain ke sabhi sangathanon ke liye design kiya gaya hai.",
+        elementsTitle: "Mukhya Tatva:",
         list: [
-          { title: "इंटरैक्टिव संचार (Interactive Communication)", description: "खाद्य श्रृंखला के सभी स्तरों पर (आपूर्तिकर्ताओं, ग्राहकों, नियामकों) संचार बहुत जरूरी है।" },
-          { title: "सिस्टम प्रबंधन (System Management)", description: "एक संरचित प्रबंधन प्रणाली (जैसे ISO 9001) की जरूरत।" },
-          { title: "पूर्वापेक्षित कार्यक्रम (Prerequisite Programs - PRPs)", description: "एक साफ, स्वच्छ वातावरण बनाए रखने के लिए बुनियादी शर्तें और गतिविधियाँ।" },
-          { title: "HACCP सिद्धांत (HACCP Principles)", description: "खाद्य सुरक्षा खतरों को नियंत्रित करने के लिए HACCP के सात सिद्धांतों को शामिल करना।" }
+          { title: "Interactive Communication", description: "Food chain ke sabhi staron par (aapoortikartaon, graahakon, niyamakon) sanchar bahut zaroori hai." },
+          { title: "System Management", description: "Ek sanrachit prabandhan pranali (jaise ISO 9001) ki zaroorat." },
+          { title: "Prerequisite Programs (PRPs)", description: "Ek saaf, swachh vatavaran banaye rakhne ke liye buniyadi shartein aur gatividhiyan." },
+          { title: "HACCP Principles", description: "Food safety khatron ko niyantrit karne ke liye HACCP ke saat siddhanton ko shamil karna." }
         ],
-        p2: "एक डेयरी संयंत्र के लिए, ISO 22000 प्रमाणन यह दर्शाता है कि उनके पास खाद्य सुरक्षा के लिए एक मजबूत और विश्वव्यापी रूप से मान्यता प्राप्त प्रणाली है, जो HACCP और PRPs को एक औपचारिक प्रबंधन ढांचे में एकीकृत करती है।"
+        p2: "Ek dairy plant ke liye, ISO 22000 pramanan yeh darshata hai ki unke paas food safety ke liye ek majboot aur vishvavyapi roop se maanyata prapt pranali hai, jo HACCP aur PRPs ko ek aupcharik prabandhan dhache mein ekikrit karti hai."
       }
     },
     haccp: {
-      title: "HACCP - खतरा विश्लेषण और महत्वपूर्ण नियंत्रण बिंदु",
-      p1: "HACCP (Hazard Analysis and Critical Control Points) खाद्य सुरक्षा के लिए एक व्यवस्थित और निवारक तरीका है। इसमें उत्पादन प्रक्रिया में होने वाले जैविक (जैसे बैक्टीरिया), रासायनिक (जैसे रसायन), और भौतिक (जैसे कांच) खतरों को पहचाना जाता है, जो अंतिम उत्पाद को असुरक्षित बना सकते हैं। फिर इन जोखिमों को सुरक्षित स्तर तक कम करने के लिए उपाय बनाए जाते हैं।",
+      title: "HACCP - Hazard Analysis and Critical Control Points",
+      p1: "HACCP food safety ke liye ek vyavasthit aur nivarak tareeka hai. Ismein utpadan prakriya mein hone wale jaivik (jaise bacteria), rasayanik (jaise chemicals), aur bhautik (jaise kaanch) khatron ko pehchana jaata hai, jo antim utpad ko asurakshit bana sakte hain. Phir in jokhimon ko surakshit star tak kam karne ke liye upay banaye jaate hain.",
       principles: {
-        title: "HACCP के सात सिद्धांत",
+        title: "HACCP ke Saat Siddhant",
         list: [
-          { title: "खतरे का विश्लेषण करें (Conduct a Hazard Analysis):", description: "डेयरी उत्पादन के हर कदम का गहरा विश्लेषण करना, कच्चे दूध से लेकर पैकेजिंग तक। हर कदम पर संभावित जैविक (लिस्टेरिया, साल्मोनेला), रासायनिक (एंटीबायोटिक्स, सफाई एजेंट), और भौतिक (धातु, कांच) खतरों को पहचाना जाता है।" },
-          { title: "महत्वपूर्ण नियंत्रण बिंदु निर्धारित करें (Determine CCPs):", description: "CCPs वे बिंदु हैं जहाँ नियंत्रण लगाकर खाद्य सुरक्षा खतरे को रोका, समाप्त, या एक स्वीकार्य स्तर तक कम किया जा सकता है। जैसे, पाश्चुरीकरण एक CCP है।" },
-          { title: "महत्वपूर्ण सीमाएं निर्धारित करें (Establish Critical Limits):", description: "हर CCP के लिए मापने योग्य सीमाएं निर्धारित करना, जैसे तापमान (≥72°C), समय (≥15 सेकंड), पीएच (≤4.6)। ये सीमाएं सुरक्षित और असुरक्षित स्थितियों के बीच की सीमा होती हैं।" },
-          { title: "निगरानी प्रक्रियाएं स्थापित करें (Establish Monitoring Procedures):", description: "यह अवलोकनों या मापों का एक नियोजित अनुक्रम है, जिससे यह आकलन किया जा सके कि एक CCP नियंत्रण में है या नहीं। इसमें यह निर्दिष्ट होता है कि क्या, कैसे, कब, और कौन निगरानी करेगा।" },
-          { title: "सुधारात्मक कार्रवाइयां स्थापित करें (Establish Corrective Actions):", description: "ये पहले से तय की गई कार्रवाइयां हैं जो तब की जाती हैं जब निगरानी से पता चलता है कि महत्वपूर्ण सीमा से विचलन हो गया है। इसमें उत्पाद को अलग करना और आगे की कार्रवाई करना शामिल है।" },
-          { title: "सत्यापन प्रक्रियाएं स्थापित करें (Establish Verification Procedures):", description: "ये गतिविधियाँ इस बात की पुष्टि करती हैं कि HACCP प्रणाली सही तरह से काम कर रही है। इसमें HACCP योजना का ऑडिट, उपकरण का अंशांकन, और परीक्षण शामिल है।" },
-          { title: "रिकॉर्ड-कीपिंग और प्रलेखन प्रक्रियाएं स्थापित करें (Establish Record-Keeping Procedures):", description: "सही और पूरा प्रलेखन HACCP प्रणाली के प्रभावी कार्यान्वयन के लिए बहुत जरूरी है। इसमें खतरा विश्लेषण, निगरानी लॉग, सुधारात्मक कार्रवाइयां, और सत्यापन गतिविधियों के रिकॉर्ड शामिल होते हैं।" }
+          { title: "Khatre ka Vishleshan Karein (Conduct a Hazard Analysis):", description: "Dairy utpadan ke har kadam ka gehra vishleshan karna, kachche doodh se lekar packaging tak. Har kadam par sambhavit jaivik (Listeria, Salmonella), rasayanik (antibiotics, cleaning agents), aur bhautik (dhatu, kaanch) khatron ko pehchana jaata hai." },
+          { title: "Mahatvapurna Niyantran Bindu Nirdharit Karein (Determine CCPs):", description: "CCPs ve bindu hain jahan niyantran lagakar food safety khatre ko roka, samapt, ya ek sweekarya star tak kam kiya ja sakta hai. Jaise, pasteurization ek CCP hai." },
+          { title: "Mahatvapurna Seemayein Nirdharit Karein (Establish Critical Limits):", description: "Har CCP ke liye maapne yogya seemayein nirdharit karna, jaise taapman (≥72°C), samay (≥15 second), pH (≤4.6). Ye seemayein surakshit aur asurakshit sthitiyon ke beech ki seema hoti hain." },
+          { title: "Nigrani Prakriyaen Sthapit Karein (Establish Monitoring Procedures):", description: "Yeh avlokanon ya maapon ka ek niyojit anukram hai, jisse yah aakalan kiya ja sake ki ek CCP niyantran mein hai ya nahi. Ismein yah nirdisht hota hai ki kya, kaise, kab, aur kaun nigrani karega." },
+          { title: "Sudharatmak Karravaiyan Sthapit Karein (Establish Corrective Actions):", description: "Ye pehle se tay ki gayi karravaiyan hain jo tab ki jaati hain jab nigrani se pata chalta hai ki mahatvapurna seema se vichalan ho gaya hai. Ismein utpad ko alag karna aur aage ki karravai karna shamil hai." },
+          { title: "Satyapan Prakriyaen Sthapit Karein (Establish Verification Procedures):", description: "Ye gatividhiyan is baat ki pushti karti hain ki HACCP pranali sahi tarah se kaam kar rahi hai. Ismein HACCP yojana ka audit, upkaran ka anshankan, aur parikshan shamil hai." },
+          { title: "Record-Keeping aur Pralekhan Prakriyaen Sthapit Karein (Establish Record-Keeping Procedures):", description: "Sahi aur poora pralekhan HACCP pranali ke prabhavi karyanvayan ke liye bahut zaroori hai. Ismein khatra vishleshan, nigrani logs, sudharatmak karravaiyan, aur satyapan gatividhiyon ke record shamil hote hain." }
         ]
       }
     },
     prps: {
-      title: "पूर्वापेक्षित कार्यक्रम (PRPs)",
-      p1: "ये कार्यक्रम एक प्रभावी HACCP प्रणाली की नींव हैं। इनका प्रभावी कार्यान्वयन खाद्य श्रृंखला में खतरों के प्रवेश की संभावना को कम करता है।",
+      title: "Prerequisite Programs (PRPs)",
+      p1: "Ye karyakram ek prabhavi HACCP pranali ki neenv hain. Inka prabhavi karyanvayan food chain mein khatron ke pravesh ki sambhavna ko kam karta hai.",
       gmp: {
-        title: "अच्छी विनिर्माण प्रथाएं (GMPs)",
-        p1: "GMPs वे नियम और दिशा-निर्देश हैं जो यह सुनिश्चित करते हैं कि उत्पाद लगातार गुणवत्ता मानकों के अनुसार बनाए और नियंत्रित किए जा रहे हैं। डेयरी उद्योग में, GMPs हर चीज को कवर करते हैं - कार्मिक स्वच्छता से लेकर उपकरण रखरखाव तक।",
+        title: "Good Manufacturing Practices (GMPs)",
+        p1: "GMPs ve niyam aur disha-nirdesh hain jo yeh sunishchit karte hain ki utpad lagatar quality manakon ke anusar banaye aur niyantrit kiye ja rahe hain. Dairy udyog mein, GMPs har cheez ko cover karte hain - karmik swachhata se lekar upkaran rakharakhav tak.",
         list: [
-            { title: "कार्मिक (Personnel)", description: "सभी कर्मचारियों को स्वच्छता और अपनी जिम्मेदारियों के लिए आवश्यक प्रशिक्षण मिलना चाहिए।" },
-            { title: "परिसर और उपकरण (Premises & Equipment)", description: "भवन और उपकरण इस तरह से डिज़ाइन और बनाए रखे जाने चाहिए कि संदूषण को रोका जा सके और सफाई आसान हो।" },
-            { title: "उत्पादन (Production)", description: "हर प्रक्रिया के लिए लिखित प्रक्रियाएं (SOPs) होनी चाहिए। महत्वपूर्ण कदमों को परिभाषित और नियंत्रित किया जाना चाहिए।" },
-            { title: "गुणवत्ता नियंत्रण (Quality Control)", description: "कच्चे माल, मध्यवर्ती, और अंतिम उत्पादों के लिए परीक्षण प्रक्रियाएं होनी चाहिए।" },
-            { title: "प्रलेखन (Documentation)", description: "हर बैच का रिकॉर्ड रखा जाना चाहिए ताकि पता लगाने की क्षमता सुनिश्चित हो सके।" },
+            { title: "Personnel (Karmik)", description: "Sabhi karmachariyon ko swachhata aur apni jimmedariyon ke liye avashyak prashikshan milna chahiye." },
+            { title: "Premises & Equipment (Parisar aur Upkaran)", description: "Bhavan aur upkaran is tarah se design aur banaye rakhe jaane chahiye ki contamination ko roka ja sake aur safai aasan ho." },
+            { title: "Production (Utpadan)", description: "Har prakriya ke liye likhit prakriyaen (SOPs) honi chahiye. Mahatvapurna kadmon ko paribhashit aur niyantrit kiya jaana chahiye." },
+            { title: "Quality Control (Gunvatta Niyantran)", description: "Kachche maal, madhyavarti, aur antim utpadon ke liye parikshan prakriyaen honi chahiye." },
+            { title: "Documentation (Pralekhan)", description: "Har batch ka record rakha jaana chahiye taaki pata lagane ki kshamata sunishchit ho sake." },
         ]
       },
       ghp: {
-        title: "अच्छी स्वच्छता प्रथाएं (GHPs)",
-        p1: "GHP, GMP का एक अनिवार्य हिस्सा है, जो भोजन को संदूषण से बचाने के लिए जरूरी सभी प्रथाओं को कवर करता है। इसका मुख्य उद्देश्य एक स्वच्छ वातावरण बनाए रखना है।",
+        title: "Good Hygiene Practices (GHPs)",
+        p1: "GHP, GMP ka ek anivarya hissa hai, jo bhojan ko contamination se bachane ke liye zaroori sabhi prathaon ko cover karta hai. Iska mukhya uddeshya ek swachh vatavaran banaye rakhna hai.",
         list: [
-          { title: "व्यक्तिगत स्वच्छता (Personal Hygiene)", description: "हाथ धोना, साफ कपड़े पहनना, और बीमार होने पर काम न करना।" },
-          { title: "सफाई और स्वच्छता (Cleaning and Sanitation)", description: "उपकरण और परिसर की नियमित और प्रभावी सफाई और स्वच्छता।" },
-          { title: "कीट नियंत्रण (Pest Control)", description: "कीड़े-मकोड़ों को संयंत्र में आने से रोकना और उन्हें खत्म करना।" },
-          { title: "अपशिष्ट प्रबंधन (Waste Management)", description: "अपशिष्ट को सही तरीके से स्टोर और निपटाना ताकि वह संदूषण का स्रोत न बने।" }
+          { title: "Personal Hygiene", description: "Haath dhona, saaf kapde pehanna, aur beemar hone par kaam na karna." },
+          { title: "Cleaning and Sanitation", description: "Upkaran aur parisar ki niyamit aur prabhavi safai aur swachhata." },
+          { title: "Pest Control", description: "Keede-makodon ko plant mein aane se rokna aur unhein khatm karna." },
+          { title: "Waste Management", description: "Apshisht ko sahi tarike se store aur niptana taaki vah contamination ka srot na bane." }
         ]
       },
       glp: {
-        title: "अच्छी प्रयोगशाला प्रथाएं (GLPs)",
-        p1: "GLP उन सिद्धांतों का एक सेट है जो गैर-नैदानिक स्वास्थ्य और पर्यावरण सुरक्षा अध्ययनों की योजना, प्रदर्शन, निगरानी, रिकॉर्डिंग, रिपोर्टिंग, और संग्रह को नियंत्रित करता है। डेयरी QC लैब के लिए, इसका मतलब है कि परीक्षण परिणाम विश्वसनीय, दोहराने योग्य, और श्रव्य हैं।",
+        title: "Good Laboratory Practices (GLPs)",
+        p1: "GLP un siddhanton ka ek set hai jo gair-naidanik swasthya aur paryavaran suraksha adhyayanon ki yojana, pradarshan, nigrani, recording, reporting, aur sangrahan ko niyantrit karta hai. Dairy QC lab ke liye, iska matlab hai ki parikshan parinaam vishvasniya, dohrane yogya, aur shrāvya hain.",
         list: [
-          { title: "संगठन और कार्मिक (Organization and Personnel)", description: "हर व्यक्ति की जिम्मेदारियां साफ होनी चाहिए और उनके पास पर्याप्त प्रशिक्षण होना चाहिए।" },
-          { title: "उपकरण, सामग्री, और अभिकर्मक (Apparatus, Material, and Reagents)", description: "सभी उपकरण आवश्यकतानुसार अंशांकित और बनाए रखे जाने चाहिए। अभिकर्मकों को आवश्यकतानुसार लेबल और स्टोर किया जाना चाहिए।" },
-          { title: "परीक्षण प्रणाली (Test Systems)", description: "परीक्षण के लिए उपयोग होने वाले भौतिक या रासायनिक प्रणालियों को आवश्यकतानुसार परिभाषित और नियंत्रित किया जाना चाहिए।" },
-          { title: "मानक संचालन प्रक्रियाएं (SOPs)", description: "हर नियमित प्रक्रिया के लिए लिखित, अनुमोदित SOPs होनी चाहिए।" },
-          { title: "परिणामों की रिपोर्टिंग (Reporting of Results)", description: "परिणामों को साफ, सटीक, और पूरी तरह से रिपोर्ट किया जाना चाहिए, जिसमें परीक्षण की स्थिति और कोई भी विचलन शामिल हो।" },
-          { title: "रिकॉर्ड का भंडारण और प्रतिधारण (Storage and Retention of Records)", description: "सभी कच्चे डेटा, रिपोर्ट, और नमूनों को एक निश्चित अवधि के लिए आवश्यकतानुसार संग्रहीत किया जाना चाहिए।" }
+          { title: "Organization and Personnel", description: "Har vyakti ki jimmedariyan saaf honi chahiye aur unke paas paryapt prashikshan hona chahiye." },
+          { title: "Apparatus, Material, and Reagents", description: "Sabhi upkaran avashyakta anusar anshankit aur banaye rakhe jaane chahiye. Abhikarmakon ko avashyakta anusar label aur store kiya jaana chahiye." },
+          { title: "Test Systems", description: "Parikshan ke liye upyog hone wale bhautik ya rasayanik pranaliyon ko avashyakta anusar paribhashit aur niyantrit kiya jaana chahiye." },
+          { title: "Standard Operating Procedures (SOPs)", description: "Har niyamit prakriya ke liye likhit, anumodit SOPs honi chahiye." },
+          { title: "Reporting of Results", description: "Parinaamon ko saaf, sateek, aur poori tarah se report kiya jaana chahiye, jismein parikshan ki sthiti aur koi bhi vichalan shamil ho." },
+          { title: "Storage and Retention of Records", description: "Sabhi kachche data, report, aur namoonon ko ek nishchit avadhi ke liye avashyakta anusar sangrahit kiya jaana chahiye." }
         ]
       }
     },
     regulatory_bodies: {
-        title: "भारत में नियामक निकाय",
-        p1: "भारतीय खाद्य प्रसंस्करण क्षेत्र अनिवार्य कानून के माध्यम से अपने गुणवत्ता मानकों को बनाए रखता है। डेयरी उद्योग में प्रचलित तीन प्रमुख भारतीय मानक FSSR, 2011, भारतीय मानक ब्यूरो (BIS), और कृषि उपज ग्रेडिंग और विपणन अधिनियम (Agmark) हैं।",
+        title: "Bharat mein Niyamak Nikay",
+        p1: "Bhartiya food processing kshetra anivarya kanoon ke madhyam se apne quality manakon ko banaye rakhta hai. Dairy udyog mein prachalit teen pramukh Bhartiya maanak FSSR, 2011, Bureau of Indian Standards (BIS), aur Agriculture Produce Grading and Marketing Act (Agmark) hain.",
         fssai: {
-            title: "भारतीय खाद्य सुरक्षा और मानक प्राधिकरण (FSSAI)",
-            p1: "भारत के खाद्य सुरक्षा और मानक नियम, खाद्य अपमिश्रण निवारण अधिनियम की जगह लेते हैं। खाद्य सुरक्षा और मानक नियम अगस्त, 2011 से प्रभावी हुए। ये अनिवार्य मानक हैं जो बाजार में जाने वाले किसी भी खाद्य उत्पाद के लिए बाध्यकारी हैं।"
+            title: "Food Safety and Standards Authority of India (FSSAI)",
+            p1: "Bharat ke Food Safety and Standards Rules, Food Adulteration Prevention Act ki jagah lete hain. Food Safety and Standards Rules August, 2011 se prabhavi hue. Ye anivarya maanak hain jo bazaar mein jaane wale kisi bhi food product ke liye badhyakari hain."
         },
         bis: {
-            title: "भारतीय मानक ब्यूरो (BIS)",
-            p1: "BIS, जिसे पहले भारतीय मानक संस्थान (ISI) के नाम से जाना जाता था, 1986 में एक वैधानिक निकाय के रूप में स्थापित किया गया था। प्रसंस्कृत खाद्य क्षेत्र में, तैयार किए गए मानक स्वैच्छिक और तृतीय पक्ष प्रमाणन प्रणालियों के माध्यम से लागू किए जाते हैं। इन मानकों का पालन करने वाले निर्माता 'ISI' या 'BIS' प्रमाणन प्राप्त कर सकते हैं।"
+            title: "Bureau of Indian Standards (BIS)",
+            p1: "BIS, jise pehle Indian Standards Institution (ISI) ke naam se jaana jaata tha, 1986 mein ek vaidhanik nikay ke roop mein sthapit kiya gaya tha. Processed food kshetra mein, taiyar kiye gaye maanak svaichhik aur tritiya paksh pramanan pranaliyon ke madhyam se laagoo kiye jaate hain. In manakon ka palan karne wale nirmata 'ISI' ya 'BIS' pramanan prapt kar sakte hain."
         },
         agmark: {
-            title: "एगमार्क (Agmark)",
-            p1: "कृषि उपज ग्रेडिंग और विपणन अधिनियम 1937 में लागू किया गया था। इसके तहत मानक 'एगमार्क' मानकों के रूप में जाने जाते हैं। इस अधिनियम के तहत ग्रेडिंग स्वैच्छिक है। तीन डेयरी उत्पाद (घी, मक्खन और डेयरी स्प्रेड) वर्तमान में इस योजना के तहत ग्रेड किए जाते हैं।"
+            title: "Agmark",
+            p1: "Agriculture Produce Grading and Marketing Act 1937 mein laagoo kiya gaya tha. Iske tehat maanak 'Agmark' manakon ke roop mein jaane jaate hain. Is adhiniyam ke tehat grading svaichhik hai. Teen dairy utpad (ghee, makkhan aur dairy spreads) vartaman mein is yojana ke tehat grade kiye jaate hain."
         },
         mmpo: {
-            title: "दूध और दुग्ध उत्पाद आदेश (MMPO)",
-            p1: "प्रतिदिन 10,000 लीटर से अधिक दूध का प्रसंस्करण करने वाले या प्रतिवर्ष 500 टन से अधिक दूध ठोस पदार्थों को संभालने वाले सभी डेयरी संयंत्रों को सक्षम प्राधिकारी से पंजीकरण प्रमाणपत्र प्राप्त करना आवश्यक है। इस आदेश ने मिल्कशेड क्षेत्रों को भी परिभाषित किया है।"
+            title: "Milk and Milk Product Order (MMPO)",
+            p1: "Pratidin 10,000 litre se adhik doodh ka prasanskaran karne wale ya prativarsh 500 tan se adhik doodh thos padarthon ko sambhalne wale sabhi dairy planton ko saksham pradhikari se panjikaran praman patra prapt karna avashyak hai. Is aadesh ne milkshed kshetron ko bhi paribhashit kiya hai."
         },
         export_act: {
-            title: "निर्यात (गुणवत्ता नियंत्रण और निरीक्षण) अधिनियम",
-            p1: "1963 में लागू किया गया और भारतीय निर्यात निरीक्षण परिषद द्वारा संचालित, यह अधिनियम निर्यात योग्य उत्पाद के लिए उत्पादन केंद्र पर निर्माता के परिसर, मानवीय स्वच्छता, कच्चे माल की गुणवत्ता, स्वच्छ स्वच्छता अभ्यास, गुणवत्ता आश्वासन कार्यक्रम, पैकेजिंग और लेबलिंग के अनिवार्य निरीक्षण पर जोर देता है।"
+            title: "Export (Quality Control and Inspection) Act",
+            p1: "1963 mein laagoo kiya gaya aur Bhartiya Niryat Nirikshan Parishad dwara sanchalit, yah adhiniyam niryat yogya utpad ke liye utpadan kendra par nirmata ke parisar, manviya swachhata, kachche maal ki quality, swachh swachhata prathaon, quality aashvasan karyakramon, packaging aur labeling ke anivarya nirikshan par jor deta hai."
         }
     }
   },
