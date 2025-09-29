@@ -32,6 +32,13 @@ import {
 } from "lucide-react";
 import { PaneerIcon, IceCreamIcon, ReagentIcon } from "@/components/icons";
 import { Input } from "@/components/ui/input";
+import { useAuth } from "@/context/auth-context";
+import { useToast } from "@/hooks/use-toast";
+import { ToastAction } from "@/components/ui/toast";
+import { useRouter } from "next/navigation";
+import { cn } from "@/lib/utils";
+
+// सभी Modals को इम्पोर्ट करें
 import { DairyIndustryModal } from "./info-modals/dairy-industry-modal";
 import { MilkChemistryModal } from "./info-modals/milk-chemistry-modal";
 import { AdulterationModal } from "./info-modals/adulteration-modal";
@@ -73,7 +80,34 @@ type Topic = {
   color: string;
 };
 
-// ## FIX: Topics ko aapke diye gaye sequence ke anusaar reorder kiya gaya hai ##
+// ## हर डिपार्टमेंट के लिए एक्सेस के नियम ##
+
+const qualityAccessTopics = [
+  'industry', 'fssai-standards', 'quality-concept', 'microbiology', 'audits', 'validation-verification',
+  'expert-support', 'calibration', 'lab-equipments', 'milk-chemistry', 'lab-calculations', 'production-calculations',
+  'adulteration', 'solutions-prep', 'compositional-analysis', 'water-testing', 'packaging-testing',
+  'std1', 'std2', 'milk-handling', 'paneer-production', 'cip-process', 'etp', 'about-us'
+];
+
+const productionAccessTopics = [
+  'industry', 'fssai-standards', 'quality-concept', 'audits', 'validation-verification', 'expert-support',
+  'milk-chemistry', 'production-calculations', 'std1', 'std2', 'processing', 'milk-handling',
+  'paneer-production', 'fermented-products', 'evaporation-drying', 'ice-cream-production',
+  'cip-process', 'etp', 'about-us'
+];
+
+const processAccessTopics = [
+  'industry', 'std1', 'std2', 'processing', 'milk-handling', 'paneer-production',
+  'fermented-products', 'evaporation-drying', 'ice-cream-production', 'cip-process', 'about-us'
+];
+
+const departmentAccess: Record<string, string[]> = {
+  'quality-access': qualityAccessTopics,
+  'production-access': productionAccessTopics,
+  'process-access': processAccessTopics,
+};
+
+// सभी Topics की लिस्ट
 const topics: Topic[] = [
   { id: 'industry', title: 'Dairy Industry', description: 'Overview & Trends', category: 'production', icon: Factory, badge: 'New', modal: DairyIndustryModal, isPro: false, color: 'from-blue-100 to-indigo-200' },
   { id: 'fssai-standards', title: 'FSSAI Standards', description: 'Official Dairy Standards', category: 'quality', icon: ShieldCheck, badge: 'New', modal: FssaiStandardsModal, isPro: false, color: 'from-green-100 to-teal-200' },
@@ -116,6 +150,9 @@ export function TopicGrid() {
   const [activeFilter, setActiveFilter] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
   const [activeModal, setActiveModal] = useState<string | null>(null);
+  const { user } = useAuth();
+  const { toast } = useToast();
+  const router = useRouter();
 
   const filteredTopics = topics.filter((topic) => {
     const matchesFilter = activeFilter === "all" || topic.category === activeFilter;
@@ -155,14 +192,53 @@ export function TopicGrid() {
       </div>
 
       <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-4 sm:gap-6">
-        {filteredTopics.map((topic, index) => {
+        {filteredTopics.map((topic) => {
+          const userDepartment = user?.department;
+          let hasAccess = false;
+
+          // Access rules logic
+          if (!user || user.isAnonymous) {
+            hasAccess = topic.id === 'about-us';
+          } else if (userDepartment === 'all-control-access') {
+            hasAccess = true;
+          } else if (userDepartment && departmentAccess[userDepartment]) {
+            hasAccess = departmentAccess[userDepartment].includes(topic.id);
+          }
+
           return (
             <div
               key={topic.id}
-              onClick={() => openModal(topic.id)}
-              className="bg-card p-4 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center relative overflow-hidden group cursor-pointer"
+              onClick={() => {
+                if (hasAccess) {
+                  openModal(topic.id);
+                } else {
+                  if (!user || user.isAnonymous) {
+                    toast({
+                      title: "Feature Locked for Guests",
+                      description: "Please sign up to access this feature.",
+                      action: <ToastAction altText="Sign Up" onClick={() => router.push('/signup')}>Sign Up</ToastAction>,
+                    });
+                  } else {
+                    toast({
+                      variant: "destructive",
+                      title: "Access Denied",
+                      description: "You do not have permission for this topic.",
+                    });
+                  }
+                }
+              }}
+              className={cn(
+                "bg-card p-4 rounded-2xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center relative overflow-hidden group",
+                hasAccess ? "cursor-pointer" : "cursor-not-allowed"
+              )}
             >
-              {topic.badge && <Badge variant={topic.badge === 'Pro' ? 'default' : 'destructive'} className="absolute top-2 right-2 text-xs px-1.5 py-0.5 h-auto animate-pulse">{topic.badge}</Badge>}
+              {!hasAccess && (
+                <>
+                  <div className="absolute inset-0 bg-black/30 backdrop-blur-sm z-10"></div>
+                  <Lock className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-8 w-8 text-white z-20" />
+                </>
+              )}
+              {topic.badge && <Badge variant={topic.badge === 'Pro' ? 'default' : 'destructive'} className="absolute top-2 right-2 text-xs px-1.5 py-0.5 h-auto animate-pulse z-30">{topic.badge}</Badge>}
               <div className={`w-16 h-16 mx-auto mb-3 rounded-full flex items-center justify-center bg-gradient-to-br ${topic.color}`}>
                 <topic.icon className="w-8 h-8 text-primary" />
               </div>
