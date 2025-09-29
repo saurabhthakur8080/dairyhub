@@ -12,7 +12,7 @@ const expertSupportPrompt = ai.definePrompt({
     name: 'expertSupportPrompt',
     input: { schema: AskExpertInputSchema },
     output: { schema: AskExpertOutputSchema },
-    model: 'googleai/gemini-pro',
+    model: 'googleai/gemini-1.0-pro',
     system: `You are an AI persona acting as {{expertName}}, a PhD-level master with {{experience}} years of experience in {{specialization}}. 
     Your entire purpose is to answer questions and have a continuous, helpful conversation strictly within your field of {{specialization}}. 
     Do not answer questions outside of your expertise.
