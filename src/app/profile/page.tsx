@@ -158,9 +158,9 @@ export default function ProfilePage() {
     return (
         <>
         <div className="max-w-md mx-auto min-h-screen bg-white shadow-lg">
-            <div className="relative bg-gradient-to-br from-cyan-400 to-blue-600 h-60 p-6 rounded-b-3xl text-white">
+            <div className="relative bg-gradient-to-b from-orange-500 via-white to-green-600 h-60 p-6 rounded-b-3xl">
                 <Link href="/" className="absolute top-4 left-4 cursor-pointer">
-                   <ChevronLeft className="h-6 w-6"/>
+                   <ChevronLeft className="h-6 w-6 text-gray-800"/>
                 </Link>
                 
                 <div className="flex flex-col items-center justify-center h-full">
@@ -346,3 +346,5 @@ export default function ProfilePage() {
         </>
     );
 }
+
+    

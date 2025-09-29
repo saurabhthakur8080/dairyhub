@@ -9,7 +9,8 @@ import {
     createUserWithEmailAndPassword, 
     signOut, 
     updateProfile as firebaseUpdateProfile,
-    signInAnonymously
+    signInAnonymously,
+    type User
 } from 'firebase/auth';
 import { getFirestore, doc, setDoc, getDoc } from 'firebase/firestore';
 import { getStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
@@ -51,10 +52,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   const storage = getStorage(app);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
+    const unsubscribe = onAuthStateChanged(auth, async (firebaseUser: User | null) => {
         if (firebaseUser) {
             const userDocRef = doc(db, 'users', firebaseUser.uid);
             const userDoc = await getDoc(userDocRef);
+
             if (userDoc.exists()) {
                 const userData = userDoc.data();
                  setUser({
@@ -76,6 +78,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
                     department: 'guest',
                 });
             } else {
+                 // This case handles a regular user who might not have a doc yet (e.g., just signed up)
                  setUser({
                     uid: firebaseUser.uid,
                     email: firebaseUser.email,
@@ -94,7 +97,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
     return () => unsubscribe();
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [auth, db]);
+  }, []);
 
   const login = (email: string, password: string) => {
     return signInWithEmailAndPassword(auth, email, password);
