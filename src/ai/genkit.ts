@@ -13,8 +13,8 @@ export const ai = genkit({
   plugins: [
     googleAI({
       apiKey: geminiApiKey,
-      apiVersion: 'v1', // <-- Ye line add karein
+      apiVersion: 'v1beta',
     }),
   ],
-  model: 'googleai/gemini-1.5-flash',
+  model: 'googleai/gemini-1.0-pro',
 });
