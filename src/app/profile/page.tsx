@@ -253,7 +253,7 @@ export default function ProfilePage() {
                     )}
                 </div>
 
-                <div className={`bg-gray-50 p-5 rounded-xl border border-gray-200 ${getCardClass(100)}`} >
+                <div className={`bg-amber-50 p-5 rounded-xl border border-amber-200 ${getCardClass(100)}`} >
                     <h3 className="font-bold text-gray-700 mb-4">Your Information</h3>
                     <div className="space-y-3">
                         <div className="flex items-center">
@@ -271,11 +271,11 @@ export default function ProfilePage() {
                     </div>
                 </div>
 
-                <div className={`bg-gray-50 p-3 rounded-xl border border-gray-200 ${getCardClass(200)}`}>
+                <div className={`bg-amber-50 p-3 rounded-xl border border-amber-200 ${getCardClass(200)}`}>
                     <ul className="divide-y divide-gray-200">
                          <Dialog>
                             <DialogTrigger asChild>
-                                <li className="flex justify-between items-center p-3 hover:bg-gray-100 rounded-lg cursor-pointer">
+                                <li className="flex justify-between items-center p-3 hover:bg-amber-100/50 rounded-lg cursor-pointer">
                                     <span className="flex items-center gap-3 text-gray-700 font-medium"><Settings/>Settings</span>
                                     <ChevronRight className="h-5 w-5 text-gray-400" />
                                 </li>
@@ -316,7 +316,7 @@ export default function ProfilePage() {
                         
                         <Dialog>
                              <DialogTrigger asChild>
-                                <li className="flex justify-between items-center p-3 hover:bg-gray-100 rounded-lg cursor-pointer">
+                                <li className="flex justify-between items-center p-3 hover:bg-amber-100/50 rounded-lg cursor-pointer">
                                     <span className="flex items-center gap-3 text-gray-700 font-medium"><HelpCircle/>Help & Support</span>
                                     <ChevronRight className="h-5 w-5 text-gray-400" />
                                 </li>
@@ -346,5 +346,7 @@ export default function ProfilePage() {
         </>
     );
 }
+
+    
 
     
