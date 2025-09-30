@@ -58,7 +58,7 @@ export function DailyTip() {
   }
 
   return (
-    <Card className="mb-8 glass-card relative">
+    <Card className="mb-8 bg-amber-50 border border-amber-200 relative">
       <div className="absolute top-1 right-1 flex items-center">
          <Button variant="ghost" size="icon" className="w-6 h-6 text-muted-foreground" onClick={handleCopy} title="Copy Tip">
             <Copy className="w-3 h-3"/>
