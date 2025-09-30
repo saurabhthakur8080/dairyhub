@@ -141,15 +141,7 @@ const topics: Topic[] = [
   { id: 'about-us', title: 'About Us', description: 'Our Mission & Vision', category: 'production', icon: Users, modal: AboutUsModal, isPro: false, color: 'from-stone-100 to-stone-200' },
 ];
 
-const filters = [
-  { label: "All", value: "all" },
-  { label: "Production", value: "production" },
-  { label: "Process", value: "process" },
-  { label: "Quality", value: "quality" },
-];
-
 export function TopicGrid() {
-  const [activeFilter, setActiveFilter] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
   const [activeModal, setActiveModal] = useState<string | null>(null);
   const { user } = useAuth();
@@ -157,9 +149,8 @@ export function TopicGrid() {
   const router = useRouter();
 
   const filteredTopics = topics.filter((topic) => {
-    const matchesFilter = activeFilter === "all" || topic.category === activeFilter;
     const matchesSearch = topic.title.toLowerCase().includes(searchTerm.toLowerCase()) || topic.description.toLowerCase().includes(searchTerm.toLowerCase());
-    return matchesFilter && matchesSearch;
+    return matchesSearch;
   });
 
   const openModal = (id: string) => {
@@ -178,18 +169,6 @@ export function TopicGrid() {
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
           />
-        </div>
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-4">
-          {filters.map((filter) => (
-            <Button
-              key={filter.value}
-              variant={activeFilter === filter.value ? "default" : "secondary"}
-              onClick={() => setActiveFilter(filter.value)}
-              className="rounded-full px-5 transition-all shadow-sm data-[variant=default]:shadow-lg"
-            >
-              {filter.label}
-            </Button>
-          ))}
         </div>
       </div>
 
