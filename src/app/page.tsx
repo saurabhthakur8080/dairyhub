@@ -8,7 +8,7 @@ import { DailyTip } from "@/components/daily-tip";
 
 
 export default function Home() {
-  const { loading, user } = useAuth();
+  const { user, loading } = useAuth();
 
   if (loading) {
     return (
