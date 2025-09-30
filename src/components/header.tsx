@@ -14,7 +14,7 @@ export function Header() {
     if (loading) {
         return (
             <header className="mb-8">
-                <Card className="glass-card transition-all">
+                <Card className="bg-gradient-to-br from-green-100 via-white to-blue-100 p-1 rounded-2xl shadow-md transition-all">
                     <CardContent className="p-4 flex items-center justify-center">
                         <Loader2 className="h-6 w-6 animate-spin" />
                     </CardContent>
@@ -26,7 +26,7 @@ export function Header() {
     return (
         <>
             <header className="mb-8">
-                <Card className="glass-card transition-all">
+                <Card className="bg-gradient-to-br from-green-100 via-white to-blue-100 p-1 rounded-2xl shadow-md transition-all">
                     <CardContent className="p-4 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
                          <div className="flex items-center gap-4 group w-full">
                             <Avatar className="w-12 h-12 border-2 border-primary/20">
