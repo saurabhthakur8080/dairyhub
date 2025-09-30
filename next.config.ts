@@ -42,11 +42,6 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  experimental: {
-      allowedDevOrigins: [
-          "https://9000-firebase-dairyhub12-1757734239586.cluster-lqnxvk7thvfw4wbonsercicksm.cloudworkstations.dev",
-      ]
-  },
   serverExternalPackages: ['handlebars', 'dotprompt'],
 };
 
