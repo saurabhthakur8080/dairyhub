@@ -42,6 +42,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  serverExternalPackages: ['handlebars', 'dotprompt'],
 };
 
 export default nextConfig;
